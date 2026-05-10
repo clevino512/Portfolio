@@ -52,18 +52,18 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // try {
-    //   const res = await fetch("https://backendportfolio-three.vercel.app/api/contact", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(formData),
-    //   });
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
+      const res = await fetch("https://backendportfolio-three.vercel.app/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+    // try {
+    //   const res = await fetch("http://localhost:5000/api/contact", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify(formData),
+    //   });
 
       const data = await res.json();
 
