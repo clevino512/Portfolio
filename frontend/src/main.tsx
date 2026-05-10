@@ -8,6 +8,7 @@ import Contact from './components/body/contact.tsx';
 import Experience from './components/body/experience.tsx';
 import Project from './components/body/project.tsx';
 import Profil from './components/body/profil.tsx';
+import CV from './components/body/cv.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/projects" element={<Project />} />
         <Route path="/certifications" element={<Competence />} />
         <Route path="/profil" element={<Profil />} />
+        <Route path="/cv" element={<CV />} />
         
       </Routes>
     </BrowserRouter>

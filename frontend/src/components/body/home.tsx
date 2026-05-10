@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Code2, Palette, Users, Globe, Sparkles, ArrowRight, Download} from 'lucide-react';
+import { Code2, Palette, Users, Globe, Sparkles, ArrowRight, Download, FileText } from 'lucide-react';
 import homeData from "../../data/home.json";
-import { FaFacebookF , FaGithub , FaLinkedin, FaWhatsapp} from "react-icons/fa";
+import { FaFacebookF, FaGithub, FaWhatsapp } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const iconMap = {
   Code2: Code2,
@@ -63,11 +64,9 @@ export default function Home() {
     >
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-20">
-          
-          {/* Colonne gauche - Texte */}
+
           <motion.div variants={fadeInUp} custom={0} className="w-full lg:w-1/2 text-center lg:text-left">
-            
-            {/* Badge */}
+
             <motion.div
               variants={fadeInUp}
               custom={0.1}
@@ -79,7 +78,6 @@ export default function Home() {
               </span>
             </motion.div>
 
-            {/* Titre principal */}
             <motion.h1
               variants={fadeInUp}
               custom={0.2}
@@ -90,7 +88,6 @@ export default function Home() {
               </span>
             </motion.h1>
 
-            {/* Nom */}
             <motion.h2
               variants={fadeInUp}
               custom={0.3}
@@ -99,7 +96,6 @@ export default function Home() {
               {homeData.name.split(' ')[0]} <span className="text-primary-600 dark:text-primary-400">{homeData.name.split(' ')[1]}</span>
             </motion.h2>
 
-            {/* Description */}
             <motion.p
               variants={fadeInUp}
               custom={0.4}
@@ -108,7 +104,6 @@ export default function Home() {
               {homeData.description}
             </motion.p>
 
-            {/* Compétences clés */}
             <motion.div
               variants={fadeInUp}
               custom={0.5}
@@ -124,7 +119,6 @@ export default function Home() {
               ))}
             </motion.div>
 
-            {/* Boutons d'action */}
             <motion.div
               variants={fadeInUp}
               custom={0.6}
@@ -140,23 +134,15 @@ export default function Home() {
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </motion.button>
 
-              <motion.button
-                onClick={() => {
-                  const link = document.createElement("a");
-                  link.href = "/CLEVIN_CV.png";
-                  link.download = "CLEVIN_CV.png";
-                  link.click();
-                }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 px-6 py-3 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-800 dark:text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+              <Link
+                to="/cv"
+                className="flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <Download size={18} />
-                Télécharger CV
-              </motion.button>
+                <FileText size={18} />
+                Voir mon CV
+              </Link>
             </motion.div>
 
-            {/* Réseaux sociaux */}
             <motion.div
               variants={fadeInUp}
               custom={0.7}
@@ -176,10 +162,8 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
-          {/* Colonne droite - Photo et compétences */}
           <motion.div variants={fadeInUp} custom={0.2} className="w-full lg:w-1/2">
-            
-            {/* Photo de profil */}
+
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
@@ -202,7 +186,6 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Grille des compétences */}
             <motion.div
               variants={staggerContainer}
               initial="hidden"
@@ -238,7 +221,6 @@ export default function Home() {
               ))}
             </motion.div>
 
-            {/* Citation */}
             <motion.div
               variants={fadeInUp}
               custom={0.5}
