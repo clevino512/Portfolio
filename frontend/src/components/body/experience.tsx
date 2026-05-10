@@ -7,7 +7,7 @@ interface Experience {
   titre: string;
   entreprise: string;
   date: string;
-  type: "Stage" | "Emploi" | "Freelance" | "Autres";
+  type: "Stage" | "embauche" | "Freelance" | "Autres";
   contenu: string;
   descriptions: string[];
   badges: string[];
@@ -19,7 +19,7 @@ const typeConfig: Record<string, { dot: string; badge: string; pill: string }> =
     badge: "bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300",
     pill: "border border-primary-200 dark:border-primary-800 text-primary-600 dark:text-primary-300 bg-primary-50 dark:bg-primary-900/20",
   },
-  Emploi: {
+  embauche: {
     dot: "bg-emerald-500",
     badge: "bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300",
     pill: "border border-emerald-200 dark:border-emerald-800 text-emerald-600 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-900/20",
@@ -36,7 +36,7 @@ const typeConfig: Record<string, { dot: string; badge: string; pill: string }> =
   },
 };
 
-const TYPES = ["Tous", "Stage", "Emploi", "Freelance", "Autres"];
+const TYPES = ["Tous", "Stage", "embauche", "Freelance", "Autres"];
 
 const containerVariants = {
   hidden: {},

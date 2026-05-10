@@ -41,6 +41,32 @@
         { "name": "PostgreSQL", "niveau": "intermédiaire" },
         { "name": "MongoDB", "niveau": "débutant" }
       ]
-    }
+    },
+    {
+      "title": "Outils de développement",
+      "outils": [
+        { "name": "Git", "niveau": "avancé" },
+        { "name": "Docker", "niveau": "intermédiaire" },
+        { "name": "VPS Linux", "niveau": "intermédiaire" }
+      ]
+    },
+    {
+      "title": "Systèmes de paiement",
+      "outils": [
+        { "name": "Mobile Money", "niveau": "intermédiaire" },
+        { "name": "Stripe", "niveau": "intermédiaire" },
+        { "name": "PayPal", "niveau": "intermédiaire" }
+      ]
+     },
+    {
+      "title": "Admiinistration de systèmes & Réseaux",
+      "outils": [
+        { "name": "System Administration", "niveau": "intermédiaire" },
+        { "name": "TCP/IP", "niveau": "avancé" },
+        { "name": "Sécurité Réseau", "niveau": "intermédiaire" },
+        { "name": "Configuration de Réseaux", "niveau": "avancé" }
+        { "name": "Linux", "niveau": "intermédiaire" },
+        { "name": "Windows Server", "niveau": "intermédiaire" }
+      ]
   ]
 }

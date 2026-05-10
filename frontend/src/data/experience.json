@@ -95,7 +95,7 @@
     "titre": "Agent Animation & Vente",
     "entreprise": "Plateforme KINGA · Diego-Suarez",
     "date": "2023",
-    "type": "Emploi",
+    "type": "embauche",
     "contenu": "Animation commerciale et gestion de la relation client",
     "descriptions": [
       "Animation de stands commerciaux",
@@ -108,7 +108,7 @@
     "titre": "Accès Bancaire / Service Client",
     "entreprise": "Banque BTW · Diego-Suarez",
     "date": "2023",
-    "type": "Emploi",
+    "type": "embauche",
     "contenu": "Accueil client et traitement des opérations bancaires",
     "descriptions": [
       "Suivi des procédures d'accueil et d'orientation des clients",
