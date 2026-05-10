@@ -64,9 +64,10 @@
         { "name": "System Administration", "niveau": "intermédiaire" },
         { "name": "TCP/IP", "niveau": "avancé" },
         { "name": "Sécurité Réseau", "niveau": "intermédiaire" },
-        { "name": "Configuration de Réseaux", "niveau": "avancé" }
+        { "name": "Configuration de Réseaux", "niveau": "avancé" },
         { "name": "Linux", "niveau": "intermédiaire" },
         { "name": "Windows Server", "niveau": "intermédiaire" }
       ]
+  }
   ]
 }
