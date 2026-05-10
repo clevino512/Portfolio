@@ -13,12 +13,18 @@ app.use(cors({
 }));
 
 // ✅ Gestion explicite des OPTIONS pour les requêtes preflight
-app.options('*', cors({
-  origin: 'https://rabenantenaina-clevin.vercel.app',
-  methods: ['POST', 'OPTIONS'],
-  credentials: true,
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://rabenantenaina-clevin.vercel.app');
+  res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.header('Access-Control-Allow-Credentials', 'true');
+  
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200);
+  }
+  
+  next();
+});
 
 // ✅ Fix BadRequestError
 app.use((req, res, next) => {
