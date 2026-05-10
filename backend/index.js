@@ -8,7 +8,16 @@ const app = express();
 app.use(cors({
   origin: 'https://rabenantenaina-clevin.vercel.app',
   methods: ['POST', 'OPTIONS'],
-  credentials: true
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+// ✅ Gestion explicite des OPTIONS pour les requêtes preflight
+app.options('*', cors({
+  origin: 'https://rabenantenaina-clevin.vercel.app',
+  methods: ['POST', 'OPTIONS'],
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 // ✅ Fix BadRequestError
