@@ -1,19 +1,18 @@
 {
   "version": 2,
-  "env": {
-    "MONGO_URI": "@mongo_uri",
-    "JWT_SECRET": "@jwt_secret",
-    "PORT": "@port"
-  },
-  "build": {
-    "env": {
-      "MONGO_URI": "@mongo_uri",
-      "JWT_SECRET": "@jwt_secret"
-    }
-  },
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/index.js" },
-    { "source": "/(.*)", "destination": "/index.js" }
+    { "source": "/(.*)",     "destination": "/index.js" }
   ],
-  "headers": [...]
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Credentials", "value": "true" },
+        { "key": "Access-Control-Allow-Origin",      "value": "https://rabenantenaina-clevin.vercel.app" },
+        { "key": "Access-Control-Allow-Methods",     "value": "POST,OPTIONS" },
+        { "key": "Access-Control-Allow-Headers",     "value": "Content-Type, Authorization" }
+      ]
+    }
+  ]
 }
