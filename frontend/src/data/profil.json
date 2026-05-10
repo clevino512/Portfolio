@@ -1,0 +1,17 @@
+{
+  "badge": "À propos",
+  "title": "Profil professionnel",
+  "description": "Développeur Frontend & Designer UI/UX passionné, je conçois et réalise des interfaces modernes, intuitives et centrées sur l'utilisateur. Créatif, autonome et orienté qualité, je transforme des idées en produits fonctionnels en alliant vision esthétique et rigueur technique React, TypeScript, Tailwind CSS.",
+  "availability": "Disponible pour des missions freelance ou des opportunités professionnelles en remote ou en présentiel. Je recherche des projets innovants à fort impact où la qualité de l'expérience utilisateur fait la différence.",
+  "contact": [
+    { "icon": "Briefcase", "text": "Développeur Full Stack & UI/UX Designer", "subtle": true },
+    { "icon": "MapPin", "text": "Province Antsiranana, Madagascar" },
+    { "icon": "Phone", "text": "+261 32 17 158 15" },
+    { "icon": "Phone", "text": "+261 38 63 341 20" },
+    { "icon": "Mail", "text": "clevino512@gmail.com", "href": "mailto:clevino512@gmail.com" }
+  ],
+  "socialLinks": [
+    { "icon": "FaGithub", "href": "https://github.com/clevino512", "label": "GitHub" },
+    { "icon": "FaLinkedin", "href": "https://linkedin.com/in/rabenantenaina-clevin", "label": "LinkedIn" }
+  ]
+}

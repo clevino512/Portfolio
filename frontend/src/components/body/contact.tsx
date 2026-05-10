@@ -1,18 +1,32 @@
-import { useState } from "react";
+import { useState} from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { 
+  MapPin, Phone, Mail, Copy, Check, Send, MessageCircle, X 
+} from "lucide-react";
+import { FaGithub , FaLinkedin, FaWhatsapp} from "react-icons/fa";
 
-import {
-  FaClipboard,
-  FaPhone,
-  FaMapMarkerAlt,
-  FaLinkedin,
-  FaWhatsapp,
-  FaGithub
-} from "react-icons/fa";
+const fadeUp = {
+  hidden: { opacity: 0, y: 28 },
+  visible: (i = 0) => ({
+    opacity: 1, y: 0,
+    transition: { duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94], delay: i * 0.1 },
+  }),
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1, delayChildren: 0.2 }
+  }
+};
 
 export default function Contact() {
-  const email = "clevino512@gmail.com";
   const [copied, setCopied] = useState(false);
   const [notification, setNotification] = useState({ message: "", type: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const email = "clevino512@gmail.com";
 
   const [formData, setFormData] = useState({
     name: "",
@@ -27,18 +41,25 @@ export default function Contact() {
     setTimeout(() => setCopied(false), 1500);
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
+    // try {
+    //   const res = await fetch("https://backendportfolio-three.vercel.app/api/contact", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify(formData),
+    //   });
     try {
-      const res = await fetch("https://backendportfolio-three.vercel.app/api/contact", {
+      const res = await fetch("http://localhost:5000/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -47,194 +68,253 @@ export default function Contact() {
       const data = await res.json();
 
       if (data.success) {
-        setNotification({ message: " Message envoyé avec succès", type: "success" });
+        setNotification({ message: "Message envoyé avec succès !", type: "success" });
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
-        setNotification({ message: " Erreur lors de l’envoi du message", type: "error" });
+        setNotification({ message: "Erreur lors de l'envoi du message", type: "error" });
       }
     } catch (error) {
       console.error("Erreur :", error);
-      setNotification({ message: " Erreur serveur", type: "error" });
+      setNotification({ message: " Erreur serveur, réessayez plus tard", type: "error" });
+    } finally {
+      setIsSubmitting(false);
     }
 
-    setTimeout(() => setNotification({ message: "", type: "" }), 3000);
+    setTimeout(() => setNotification({ message: "", type: "" }), 4000);
   };
+
+  const contactInfo = [
+    { icon: MapPin, label: "Localisation", value: "Antsiranana, Madagascar", href: "https://www.google.com/maps/search/?api=1&query=Antsiranana+Madagascar" },
+    { icon: Phone, label: "Téléphone", value: "+261 32 17 158 15 / +261 38 63 341 20", href: "tel:+261321715815" },
+    { icon: Mail, label: "Email", value: email, isEmail: true },
+  ];
+
+  const socialLinks = [
+    { icon: MessageCircle, href: "https://wa.me/261386334120", label: "WhatsApp", color: "hover:text-emerald-500" },
+    { icon: FaLinkedin, href: "https://www.linkedin.com/in/rabenantenaina-cl%C3%A9vin-4a727314b/", label: "LinkedIn", color: "hover:text-blue-500" },
+    { icon: FaGithub, href: "https://github.com/clevino512", label: "GitHub", color: "hover:text-gray-900 dark:hover:text-white" },
+    { icon: FaWhatsapp, href: "https://wa.me/261386334120", label: "WhatsApp", color: "hover:text-emerald-500" },
+  ];
 
   return (
     <>
-      {/* Notification moderne */}
-      {notification.message && (
-        <div
-          className={`fixed top-6 right-4 z-50 px-4 py-2  shadow-lg text-white text-sm sm:text-base flex items-center gap-3 transition-all duration-300
-            ${notification.type === "success" ? "bg-green-600" : "bg-red-600"} animate-slide-in`}
-        >
-          <span>{notification.message}</span>
-          <button
-            onClick={() => setNotification({ message: "", type: "" })}
-            className="ml-2 text-white hover:text-gray-200 focus:outline-none"
-            aria-label="Fermer la notification"
+      <AnimatePresence>
+        {notification.message && (
+          <motion.div
+            initial={{ opacity: 0, x: 50, scale: 0.9 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, x: 50, scale: 0.9 }}
+            className={`fixed top-6 right-4 z-50 px-5 py-3 rounded-xl shadow-2xl text-white  text-sm sm:text-base flex items-center gap-3 backdrop-blur-sm ${
+              notification.type === "success"
+                ? "bg-emerald-600"
+                : "bg-red-600"
+            }`}
           >
-            ✖
-          </button>
-        </div>
-        )
-      }
+            <span>{notification.message}</span>
+            <button
+              onClick={() => setNotification({ message: "", type: "" })}
+              className="ml-2 text-gray-400  text-white hover:text-gray-200 transition-colors"
+              aria-label="Fermer"
+            >
+              <X size={16} />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      <section className="w-full mt-40 md:mt-40 lg:mt-0 bg-gray-900 text-gray-100 px-6 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Infos de contact */}
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold">Contact</h2>
-            <p className="text-gray-300 leading-relaxed">
-              Vous pouvez me contacter pour toute collaboration, mission freelance ou échange professionnel.
-            </p>
+      <section className="relative w-full py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950 transition-colors duration-300 overflow-hidden">
+        <div className="relative z-10 max-w-7xl mx-auto">
+          
+          {/* En-tête */}
+          <motion.div
+            className="space-y-8 text-center mb-12"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <motion.p
+              variants={fadeUp} custom={0}
+              className="text-sm font-semibold tracking-[0.18em] uppercase text-primary-600 dark:text-primary-400"
+            >
+              Me contacter directement
+            </motion.p>
 
-            <div className="space-y-6 text-sm">
-              {/* Adresse */}
-              <div>
-                <h3 className="text-2xl font-bold mb-4">Adresse</h3>
-                <ul className="space-y-text-gray-300">
-                  <li className="flex items-center gap-3">
-                    <FaMapMarkerAlt className="text-indigo-500 text-xl" />
-                    <a
-                      href="https://www.google.com/maps/search/?api=1&query=P.O.+Box+14,+Ornella+Center,+Antalaha+206,+Madagascar"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:underline"
-                    >
-                      Madagascar
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              {/* Téléphone */}
-              <div>
-                <h3 className="text-2xl font-bold mt-10 mb-4">Téléphone</h3>
-                <ul className="space-y-4 text-gray-300">
-                  <li className="flex items-center gap-3">
-                    <FaPhone className="text-indigo-500 text-xl" />
-                      <a href="tel:+261321715815" className="hover:underline">
-                      +261 32 17 158 15 
-                    </a>                    
-                    <a href="tel:+261386334120" className="hover:underline">
-                      +261 38 63 341 20 
-                    </a>
-                  </li>
-                </ul>
-              </div>
+            <motion.h1
+              variants={fadeUp} custom={1}
+              className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white"
+            >
+              Parlons de votre{" "}
+              <span className="text-primary-600 dark:text-primary-400">projet</span>
+            </motion.h1>
 
-              {/* Email */}
-              <div>
-                <h3 className="text-lg font-semibold mt-10 mb-1">Email</h3>
-                <div className="flex items-center gap-3 bg-gray-800 px-4 py-2 rounded-md w-fit shadow-md">
-                  <span className="text-gray-100 font-medium select-all">
-                    {email}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={handleCopy}
-                    aria-label="Copier l'adresse email"
-                    className="text-gray-300 hover:text-indigo-400 transition"
+            <motion.p
+              variants={fadeUp} custom={2}
+              className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
+            >
+              Vous avez un projet en tête ? Une collaboration ou une mission freelance ?
+              N'hésitez pas à me contacter, je vous répondrai dans les plus brefs délais.
+            </motion.p>
+          </motion.div>
+
+          {/* Grille Contact */}
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+          >
+            
+            {/* Colonne gauche - Infos */}
+            <motion.div variants={fadeUp} custom={0.1} className="space-y-6">
+              {contactInfo.map((info, idx) => {
+                const Icon = info.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="group bg-white dark:bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 dark:border-gray-800 hover:border-primary-500/50 transition-all duration-300"
                   >
-                    <FaClipboard className="w-5 h-5" />
-                  </button>
-                  {copied && (
-                    <span className="text-xs text-green-400 font-medium animate-pulse">
-                      Copié !
-                    </span>
-                  )}
-                </div>
-              </div>
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 rounded-xl bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 group-hover:scale-110 transition-transform duration-300">
+                        <Icon size={20} />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">{info.label}</h3>
+                        {info.isEmail ? (
+                          <div className="flex items-center gap-3 mt-1">
+                            <span className="text-gray-900 dark:text-white font-medium">{info.value}</span>
+                            <button
+                              onClick={handleCopy}
+                              className="p-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-500 hover:text-primary-600 transition-colors"
+                              aria-label="Copier l'email"
+                            >
+                              {copied ? <Check size={14} /> : <Copy size={14} />}
+                            </button>
+                            {copied && (
+                              <span className="text-xs text-emerald-500 animate-pulse">Copié !</span>
+                            )}
+                          </div>
+                        ) : (
+                          <a
+                            href={info.href}
+                            target={info.label === "Localisation" ? "_blank" : "_self"}
+                            rel="noopener noreferrer"
+                            className="text-gray-900 dark:text-white font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                          >
+                            {info.value}
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
 
               {/* Réseaux sociaux */}
-              <div className="flex w-full justify-start p-4 items-center gap-4 text-2xl md:text-4xl lg:text-6xl">
-                <a
-                  href="https://wa.me/261386334120"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="WhatsApp"
-                  className="hover:text-green-500 duration-150"
-                >
-                  <FaWhatsapp />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/rabenantenaina-cl%C3%A9vin-4a727314b/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className="hover:text-blue-600 duration-150"
-                >
-                  <FaLinkedin />
-                </a>
-
-                <a
-                  href="https://github.com/clevino512"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                  className="hover:text-white duration-150"
-                >
-                  <FaGithub />
-                </a>
+              <div className="bg-white dark:bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 dark:border-gray-800">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                  Retrouvez-moi sur
+                </h3>
+                <div className="flex gap-4">
+                  {socialLinks.map((social, idx) => {
+                    const Icon = social.icon;
+                    return (
+                      <a
+                        key={idx}
+                        href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`p-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 ${social.color} transition-all duration-300 hover:scale-110 hover:shadow-lg`}
+                        aria-label={social.label}
+                      >
+                        <Icon size={20} />
+                      </a>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
 
-          {/* Formulaire */}
-          <div className="space-y-6 bg-gray-800 p-8 rounded-xl shadow-lg">
-            <h2 className="text-3xl font-bold text-white">Envoyer un message</h2>
-            <p className="text-gray-400">
-              Remplissez le formulaire ci-dessous et je vous répondrai dans les plus brefs délais.
-            </p>
+            {/* Colonne droite - Formulaire */}
+            <motion.div variants={fadeUp} custom={0.2}>
+              <div className="bg-white dark:bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-200 dark:border-gray-800 shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                  Envoyez-moi un message
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400 mb-6">
+                  Remplissez le formulaire et je vous répondrai rapidement
+                </p>
 
-            <form className="space-y-4" onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Votre nom"
-                  required
-                  className= "bg-gray-700 text-white placeholder-gray-400 px-4 py-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Votre email"
-                  required
-                  className=" bg-gray-700 text-white placeholder-gray-400 px-4 py-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
+                <form className="space-y-4" onSubmit={handleSubmit}>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder="Votre nom"
+                        required
+                        className="w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder="Votre email"
+                        required
+                        className="w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                      />
+                    </div>
+                  </div>
+                  
+                  <input
+                    type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    placeholder="Sujet"
+                    required
+                    className="w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                  />
+                  
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={5}
+                    placeholder="Votre message"
+                    required
+                    className="w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none"
+                  />
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="group w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Envoi en cours...
+                      </>
+                    ) : (
+                      <>
+                        <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                        Envoyer le message
+                      </>
+                    )}
+                  </button>
+                </form>
               </div>
-              <input
-                type="text"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                placeholder="Sujet"
-                required
-                className="bg-gray-700 text-white placeholder-gray-400 px-4 py-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              />
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={5}
-                placeholder="Votre message"
-                required
-                className="bg-gray-700 text-white placeholder-gray-400 px-4 py-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500" >
-              </textarea>
-
-              <button
-                type="submit"
-                className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded-md transition-all duration-300 w-full sm:w-auto"
-              >
-                Envoyer le message
-              </button>
-            </form>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
     </>

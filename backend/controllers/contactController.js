@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
+
 dotenv.config();
 
 export const handleContactForm = async (req, res) => {
@@ -11,35 +12,49 @@ export const handleContactForm = async (req, res) => {
 
   try {
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: process.env.SMTP_PORT,
-      secure: false, 
+      host: process.env.MAIL_HOST,
+      port: parseInt(process.env.MAIL_PORT),
+      secure: false,
+      family: 4,
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: process.env.MAIL_USERNAME,
+        pass: process.env.MAIL_PASSWORD,
       },
     });
 
     const mailOptions = {
-      from: `"${name}" <${email}>`,
-      to: process.env.DEST_EMAIL,
-      subject: `Vous avez un message de votre Portfolio : ${subject}`,
+      from: `"${name}" <${process.env.MAIL_FROM_ADDRESS}>`,
+      to: process.env.MAIL_FROM_ADDRESS,
+      replyTo: email,
+      subject: `Portfolio - ${subject}`,
       html: `
-        <h3>Message reçu via le formulaire</h3>
-        <p><strong>Nom :</strong> ${name}</p>
-        <p><strong>Email :</strong> ${email}</p>
-        <p><strong>Sujet :</strong> ${subject}</p>
-        <p><strong>Message :</strong><br/>${message}</p>
+        <div style="font-family: sans-serif; line-height: 1.5; color: #333;">
+          <h2 style="color: #6366f1;">Nouveau message du Portfolio</h2>
+          <p><strong>Nom :</strong> ${name}</p>
+          <p><strong>Email :</strong> ${email}</p>
+          <p><strong>Sujet :</strong> ${subject}</p>
+          <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+          <p><strong>Message :</strong></p>
+          <p style="white-space: pre-wrap;">${message}</p>
+        </div>
       `,
     };
 
     await transporter.sendMail(mailOptions);
-    console.log(`[${new Date().toLocaleString()}] 📨 Message reçu de ${name} <${email}>`);
 
+    console.log(`[${new Date().toLocaleString()}] ✅ Email envoyé avec succès par ${name}`);
 
-    res.status(200).json({ success: true, message: 'Message envoyé par email ✅' });
+    return res.status(200).json({
+      success: true,
+      message: 'Votre message a été envoyé avec succès !',
+    });
+
   } catch (error) {
-    console.error('Erreur envoi email :', error);
-    res.status(500).json({ error: 'Erreur lors de l’envoi du message.' });
+    console.error(`[${new Date().toLocaleString()}] ❌ Erreur backend :`, error);
+
+    return res.status(500).json({
+      error: "Une erreur est survenue lors de l'envoi de l'email.",
+      details: error.message,
+    });
   }
 };

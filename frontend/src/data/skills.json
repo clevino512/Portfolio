@@ -1,0 +1,46 @@
+{
+  "categories": [
+    {
+      "title": "Frameworks",
+      "outils": [
+        { "name": "React.js", "niveau": "avancé" },
+        { "name": "Vue.js", "niveau": "intermédiaire" },
+        { "name": "Django / Tkinter", "niveau": "intermédiaire" },
+        { "name": "Flutter", "niveau": "débutant" }
+      ]
+    },
+    {
+      "title": "API & Services REST",
+      "outils": [
+        { "name": "Axios", "niveau": "avancé" },
+        { "name": "Fetch API", "niveau": "intermédiaire" },
+        { "name": "REST Architecture", "niveau": "intermédiaire" }
+      ]
+    },
+    {
+      "title": "Suite Adobe Creative",
+      "outils": [
+        { "name": "InDesign", "niveau": "intermédiaire" },
+        { "name": "Photoshop", "niveau": "avancé" },
+        { "name": "Illustrator", "niveau": "intermédiaire" },
+        { "name": "Premiere Pro", "niveau": "intermédiaire" }
+      ]
+    },
+    {
+      "title": "Outils de conception & prototypage",
+      "outils": [
+        { "name": "Figma", "niveau": "intermédiaire" },
+        { "name": "Draw.io", "niveau": "intermédiaire" }
+      ]
+    },
+    {
+      "title": "Bases de données",
+      "outils": [
+        { "name": "MySQL", "niveau": "intermédiaire" },
+        { "name": "SQL", "niveau": "intermédiaire" },
+        { "name": "PostgreSQL", "niveau": "intermédiaire" },
+        { "name": "MongoDB", "niveau": "débutant" }
+      ]
+    }
+  ]
+}

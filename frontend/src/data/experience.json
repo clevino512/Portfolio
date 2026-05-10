@@ -1,0 +1,149 @@
+[
+  {
+    "titre": "Développeur Full Stack Freelance",
+    "entreprise": "RAVINALA Digital · Indépendant",
+    "date": "Février 2026 – Présent",
+    "type": "Freelance",
+    "contenu": "Conception et développement d'applications web full stack (React, Laravel, Node.js)",
+    "descriptions": [
+      "Développement d'API REST avec Laravel (controllers resourceful, Form Requests, API Resources)",
+      "Authentification et autorisations avec Laravel Sanctum / Spatie Permissions",
+      "Modélisation base de données avec Eloquent ORM et migrations versionnées",
+      "Intégration systèmes de paiement tiers (Mobile Money, Stripe, PayPal)",
+      "Déploiement et configuration VPS Linux (Nginx, PHP-FPM, Docker)",
+      "Développement d'applications React/TypeScript complexes avec Hooks, Context API",
+      "Intégration APIs REST & GraphQL, paiement, email, SMS (services tiers)"
+    ],
+    "badges": ["Laravel", "React", "TypeScript", "Node.js", "REST API", "Docker", "MySQL", "Sanctum"]
+  },
+  {
+    "titre": "Développeur Frontend Stagiaire",
+    "entreprise": "Mahiratra Groupe Antalaha",
+    "date": "Octobre 2025 – Présent",
+    "type": "Stage",
+    "contenu": "Développement Frontend en React, TypeScript et Tailwind CSS",
+    "descriptions": [
+      "Développement de composants UI scalables (React, TypeScript, Tailwind CSS)",
+      "Conversion de maquettes Figma en interfaces HTML/CSS/JS responsives",
+      "Intégration back-end via REST APIs",
+      "Travail en équipe sur plateforme collaborative avec Git Flow",
+      "Rédaction de tests unitaires et fonctionnels (React Testing Library)"
+    ],
+    "badges": ["React", "TypeScript", "Tailwind CSS", "REST API", "Figma", "Git Flow", "RTL"]
+  },
+  {
+    "titre": "Développeur Full Stack",
+    "entreprise": "Ornella Center · Mahiratra Groupe",
+    "date": "Septembre 2025 – Janvier 2026",
+    "type": "Stage",
+    "contenu": "Développement full stack avec React, Node.js et déploiement Docker",
+    "descriptions": [
+      "Développement React/TypeScript : composants réutilisables, clean code, ESLint",
+      "API REST Node.js/Express — authentification JWT & gestion rôles RBAC",
+      "Déploiement Docker & pipelines CI/CD — optimisation performances frontend",
+      "Rédaction tests unitaires et fonctionnels (React Testing Library)",
+      "Collaboration Product Owners, UX/UI et sprints Agile/Scrum"
+    ],
+    "badges": ["React", "TypeScript", "Node.js", "Express.js", "JWT", "Docker", "CI/CD", "RBAC", "Agile/Scrum"]
+  },
+  {
+    "titre": "Développeur Frontend",
+    "entreprise": "Vahatra Center Diego · Hackathon",
+    "date": "Août 2025",
+    "type": "Autres",
+    "contenu": "Développement d'un site web responsive (Projet Hackathon – 1ère Place 🥇)",
+    "descriptions": [
+      "Réalisation complète d'un site web responsive en 48h",
+      "Développement en PHP Laravel et React",
+      "Conception UI/UX du site et intégration des fonctionnalités",
+      "Optimisation des performances et de l'expérience utilisateur",
+      "Dashboard temps réel avec suivi de l'avancement global et KPIs"
+    ],
+    "badges": ["React", "Laravel", "PHP", "Tailwind CSS", "UI/UX", "Dashboard"]
+  },
+  {
+    "titre": "Graphic Designer & UI Developer",
+    "entreprise": "Freelance",
+    "date": "2023 – Présent",
+    "type": "Freelance",
+    "contenu": "Création de visuels graphiques et templates Web",
+    "descriptions": [
+      "Conception de flyers, logos et affiches",
+      "Création de bannières réseaux sociaux",
+      "Production de templates Web modernes",
+      "Approche créative orientée identité visuelle",
+      "Design et conversion de maquettes Figma/Photoshop en pages web responsives"
+    ],
+    "badges": ["Photoshop", "Illustrator", "Figma", "Canva", "UI Design"]
+  },
+  {
+    "titre": "Stagiaire Journaliste / Animateur Radio",
+    "entreprise": "Radio MBS & Radio 2000",
+    "date": "2019 – 2023",
+    "type": "Stage",
+    "contenu": "Animation radio, reportages et production éditoriale",
+    "descriptions": [
+      "Rédaction et présentation de reportages en direct",
+      "Couverture d'événements locaux",
+      "Initiation aux techniques de prise de son et de montage audio",
+      "Animation d'émissions locales, préparation de contenus éditoriaux",
+      "Interaction avec les auditeurs en direct et gestion de la régie son"
+    ],
+    "badges": ["Journalisme", "Animation radio", "Montage audio", "Prise de son"]
+  },
+  {
+    "titre": "Agent Animation & Vente",
+    "entreprise": "Plateforme KINGA · Diego-Suarez",
+    "date": "2023",
+    "type": "Emploi",
+    "contenu": "Animation commerciale et gestion de la relation client",
+    "descriptions": [
+      "Animation de stands commerciaux",
+      "Promotion de produits et services auprès du public",
+      "Gestion des transactions et fidélisation de la clientèle"
+    ],
+    "badges": ["Vente", "Animation commerciale", "Relation client", "Fidélisation"]
+  },
+  {
+    "titre": "Accès Bancaire / Service Client",
+    "entreprise": "Banque BTW · Diego-Suarez",
+    "date": "2023",
+    "type": "Emploi",
+    "contenu": "Accueil client et traitement des opérations bancaires",
+    "descriptions": [
+      "Suivi des procédures d'accueil et d'orientation des clients",
+      "Traitement des demandes de prêt",
+      "Gestion des opérations bancaires courantes",
+      "Accompagnement des clients pour l'ouverture de comptes bancaires"
+    ],
+    "badges": ["Service client", "Opérations bancaires", "Accueil", "Prêts"]
+  },
+  {
+    "titre": "Enquêteur Terrain",
+    "entreprise": "UNICEF · MICS6",
+    "date": "2018",
+    "type": "Autres",
+    "contenu": "Collecte de données sociales sur le terrain (Programme UNICEF)",
+    "descriptions": [
+      "Collecte de données sociales sur le terrain (enquête UNICEF)",
+      "Conduite d'entretiens structurés auprès des ménages",
+      "Saisie rigoureuse des résultats et reporting",
+      "Respect des protocoles d'enquête et des délais"
+    ],
+    "badges": ["Enquête terrain", "Collecte de données", "Entretiens", "Reporting", "UNICEF"]
+  },
+  {
+    "titre": "Formation Électricité Bâtiment",
+    "entreprise": "Installation & Câblage",
+    "date": "2022",
+    "type": "Autres",
+    "contenu": "Installation électrique résidentielle et câblage",
+    "descriptions": [
+      "Formation pratique en installation électrique résidentielle",
+      "Lecture de schémas électriques",
+      "Câblage de tableaux électriques",
+      "Respect des normes de sécurité"
+    ],
+    "badges": ["Électricité", "Câblage", "Tableaux électriques", "Sécurité"]
+  }
+]

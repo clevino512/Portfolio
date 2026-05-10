@@ -1,57 +1,55 @@
-import React from "react";
+import { motion } from "framer-motion";
+import { Globe } from "lucide-react";
 
 interface Langue {
   name: string;
   progress: number;
   level: string;
-  link?: string; // lien optionnel pour chaque langue
+  flag: string;
+  link?: string;
 }
 
-const langues: Langue[] = [
-  { name: "Malagasy", progress: 100, level: "Maternelle", link: "https://fr.wikipedia.org/wiki/Malgache" },
-  { name: "Français", progress: 70, level: "Intermédiaire", link: "https://fr.wikipedia.org/wiki/Français" },
-  { name: "Anglais", progress: 50, level: "Technique", link: "https://en.wikipedia.org/wiki/English_language" },
-];
+interface LanguesProps {
+  languages: Langue[];
+}
 
-export default function Langues() {
-  const handleClick = (link?: string) => {
-    if (!link) return;
-    window.open(link, "_blank"); // Ouvre dans un nouvel onglet
-  };
+const barColor: Record<number, string> = {
+  100: "bg-primary-500 dark:bg-primary-400",
+  70:  "bg-amber-500 dark:bg-amber-400",
+  50:  "bg-emerald-500 dark:bg-emerald-400",
+};
 
+export default function Langues({ languages }: LanguesProps) {
   return (
-    <div className="w-full max-w-xl mx-auto ">
-      <h3 className="text-xl font-semibold pb-4 ">
+    <div className="space-y-5">
+      <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+        <Globe size={18} className="text-primary-500" />
         Langues
       </h3>
 
-      {langues.map((langue, index) => (
+      {languages.map((langue, i) => (
         <div
-          key={index}
-          className="group relative pb-4 cursor-pointer"
-          onClick={() => handleClick(langue.link)}
+          key={i}
+          className="group cursor-pointer"
+          onClick={() => langue.link && window.open(langue.link, "_blank")}
         >
-          {/* Nom + Pourcentage */}
           <div className="flex justify-between items-center mb-2">
-            <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+            <span className="flex items-center gap-2 text-base font-medium text-gray-800 dark:text-gray-200">
               {langue.name}
             </span>
-            <span className="text-sm text-gray-500 dark:text-gray-300">
-              {langue.progress}%
+            <span className="text-sm text-gray-400 dark:text-gray-500">
+              {langue.level}
             </span>
           </div>
 
-          {/* Barre de progression */}
-          <div className="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
-            <div
-              className="bg-indigo-600 dark:bg-indigo-400 h-2 rounded-full transition-all duration-700 ease-out group-hover:bg-indigo-500"
-              style={{ width: `${langue.progress}%` }}
+          <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-full h-1.5 overflow-hidden">
+            <motion.div
+              className={`h-1.5 rounded-full ${barColor[langue.progress] ?? "bg-primary-500"} transition-opacity duration-200 group-hover:opacity-80`}
+              initial={{ width: 0 }}
+              whileInView={{ width: `${langue.progress}%` }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: i * 0.12, ease: "easeOut" }}
             />
-          </div>
-
-          {/* Tooltip au survol */}
-          <div className="absolute left-1/2 -translate-x-1/2 -top-7 bg-gray-800 text-gray-100 text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-lg">
-            {langue.level}
           </div>
         </div>
       ))}

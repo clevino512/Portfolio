@@ -1,0 +1,19 @@
+{
+  "badge": "Disponible pour missions",
+  "title": "Développeur Full Stack",
+  "name": "RABENANTENAINA Clévin",
+  "description": "Développeur Full Stack passionné, je conçois des applications web complètes, de l'architecture backend à l'interface utilisateur.",
+  "quickSkills": ["TypeScript", "Laravel/Symfony", "Python", "Node/Express"],
+  "skills": [
+    { "icon": "Code2", "title": "Frontend", "items": ["React", "TypeScript", "Tailwind CSS"] },
+    { "icon": "Palette", "title": "UI/UX", "items": ["Figma", "Photoshop", "Illustrator"] },
+    { "icon": "Users", "title": "Leadership", "items": ["Agile/Scrum", "Team Management", "Code Review"] },
+    { "icon": "Globe", "title": "Backend", "items": ["Node.js", "Laravel", "MongoDB"] }
+  ],
+  "socialLinks": [
+    { "icon": "Github", "href": "https://github.com/clevino512", "label": "GitHub" },
+    { "icon": "Linkedin", "href": "https://linkedin.com/in/rabenantenaina-clevin", "label": "LinkedIn" },
+    { "icon": "Facebook", "href": "https://www.facebook.com/clevin.s.gertz.le.prophete/", "label": "Facebook" }
+  ],
+  "quote": "Transformer les idées en expériences digitales mémorables"
+}

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import Home from "./components/body/home";
 import Profil from "./components/body/profil";
 import Experiences from "./components/body/experience";
@@ -7,49 +7,74 @@ import Competence from "./components/body/competence";
 import Contact from "./components/body/contact";
 import FooterNavs from "./components/header/FooterNavs";
 import Footer from "./components/header/footer";
-import Side from "./components/header/side"
-import "./App.css";
+import Navbar from "./components/header/side"; 
+import './index.css';
 
 function App() {
   const topRef = useRef<HTMLDivElement>(null);
+  
+  const [darkMode, setDarkMode] = useState(() => {
+     const saved = localStorage.getItem("theme");
+    return saved === "dark" || (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  });
+
+  useEffect(() => {
+    const root = window.document.documentElement; 
+    if (darkMode) {
+      root.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      root.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [darkMode]);
+
+  const toggleDarkMode = useCallback(() => {
+    setDarkMode((prev) => !prev);
+  }, []);
+
+  const scrollToTop = useCallback(() => {
+    topRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
 
   return (
-    <main className="bg-gray-900  text-gray-100">
-      <div ref={topRef}>
-
-        {/*Navbar incluse ici */}
-        <Side />
-        
-        {/*Sections principales */}
-        <section id="accueil" data-name="Accueil" className="scroll-mt-[350px] md:scroll-mt-[400px] lg:scroll-mt-[100px]">
+    // bg-white dark:bg-gray-950 permet d'éviter le flash blanc au chargement
+    <div className="min-h-screen bg-white dark:bg-gray-950 transition-colors duration-300">
+      <div ref={topRef} />
+      
+      {/* Navbar avec passage des props nécessaires */}
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Sections avec espacement cohérent */}
+        <section id="accueil" className=" py-6 lg:py-10">
           <Home />
         </section>
 
-        <section id="profil" data-name="Profil" className=" scroll-mt-[400px] md:scroll-mt-[450px] lg:scroll-mt-[100px]">
+        <section id="profil" className=" py-6 lg:py-10">
           <Profil />
         </section>
 
-        <section  id="experiences"  data-name="Expériences" className=" mb-40 md:mb-40 mb:40 scroll-mt-[400px] md:scroll-mt-[450px] lg:scroll-mt-[100px]">
+        <section id="experiences" className=" py-6 lg:py-10">
           <Experiences />
         </section>
 
-        <section id="competence" data-name="Compétences" className=" scroll-mt-[400px] md:scroll-mt-[450px] lg:scroll-mt-[100px]">
+        <section id="competence" className=" py-6 lg:py-10">
           <Competence />
         </section>
 
-        <section id="project" data-name="Projets" className=" scroll-mt-[400px] md:scroll-mt-[450px] lg:scroll-mt-[100px]">
+        <section id="project" className=" py-6 lg:py-10">
           <Project />
         </section>
 
-        <section id="contact" data-name="Contact" className=" mb-30 scroll-mt-[400px] md:scroll-mt-[450px] lg:scroll-mt-[100px]">
+        <section id="contact" className=" py-6 lg:py-10">
           <Contact />
         </section>
+      </main>
 
-        {/*  Footer */}
-        <FooterNavs scrollToTop={() => topRef.current?.scrollIntoView({ behavior: "smooth" })} />
-        <Footer />
-      </div>
-    </main>
+      <FooterNavs scrollToTop={scrollToTop} />
+      <Footer />
+    </div>
   );
 }
 

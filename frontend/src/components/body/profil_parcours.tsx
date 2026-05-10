@@ -1,78 +1,91 @@
-const StackedListBadgeActionButton = () => {
-  const array = [
-    {
-      name: "Master en Science Informatique et Télécommunication Réseaux",
-      status: "En cours",
-      desc: "École Supérieur Polytechnique, Antsiranana",
-      start_date: "2024",
-      end_date: "Présent",
-    },
-    {
-      name: "Licence en Informatique Industrielle",
-      status: "Diplôme",
-      desc: "École Supérieure Polytechnique d’Antsiranana",
-      start_date: "2023",
-      end_date: "2024",
-    },
-    {
-      name: "Baccalauréat série scientifique",
-      status: "Diplôme",
-      desc: "Lycée Maroantsetra Madagascar",
-      start_date: "2018",
-      end_date: "2019",
-    },
-  ];
+import { motion } from "framer-motion";
+import { GraduationCap } from "lucide-react";
 
-  return (
-    <ul role="list" className="space-y-3 sm:space-y-4">
-      {array.map((item, index) => (
-        <li
-          key={index}
-          className="
-            bg-gray-800/50 backdrop-blur-md border border-gray-700/70
-            rounded-2xl p-5 sm:p-6 shadow-lg
-            hover:border-gray-500 hover:shadow-gray-400/20
-            transition-all duration-300
-          "
-        >
-          {/* Titre + Statut */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
-            <h3 className="text-lg sm:text-xl font-semibold text-white leading-snug">
-              {item.name}
-            </h3>
+interface Education {
+  name: string;
+  status: string;
+  desc: string;
+  start: string;
+  end: string;
+  color: string;
+}
 
-            <span
-              className={`
-                mt-2 sm:mt-0 px-3 py-1 rounded-full text-xs sm:text-sm font-medium
-                whitespace-nowrap  /* empêche totalement le wrap */
-                ${
-                  item.status === "Diplôme"
-                    ? "bg-green-700 text-green-100"
-                    : item.status === "En cours"
-                    ? "bg-orange-700 text-orange-100"
-                    : "bg-gray-700 text-gray-100"
-                }
-              `}
-            >
-              {item.status}
-            </span>
-          </div>
+interface ParcoursProps {
+  education: Education[];
+}
 
-          {/* Séparateur */}
-          <div className="w-full h-px bg-gray-700 mb-4" />
-
-          {/* Description + Dates */}
-          <div className="flex flex-col sm:flex-row items-start justify-between gap-3 text-gray-300">
-            <p className="sm:w-3/4 text-sm leading-relaxed">{item.desc}</p>
-
-            <p className="sm:w-1/4 text-sm font-medium text-gray-400 text-end">
-              {item.start_date} – {item.end_date}
-            </p>
-          </div>
-        </li>
-      ))}
-    </ul>
-  );
+const statusStyle: Record<string, string> = {
+  "En cours":  "bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-300 border border-primary-200 dark:border-primary-800",
+  "Diplômé":   "bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800",
+  "Mémoriste": "bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-300 border border-amber-200 dark:border-amber-800",
 };
 
-export default StackedListBadgeActionButton;
+const dotColor: Record<string, string> = {
+  primary: "bg-primary-500",
+  emerald: "bg-emerald-500",
+  amber:   "bg-amber-500",
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number) => ({
+    opacity: 1, y: 0,
+    transition: { duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94], delay: i * 0.1 },
+  }),
+};
+
+export default function StackedListBadgeActionButton({ education }: ParcoursProps) {
+  return (
+    <div className="relative">
+      <div className="absolute left-[10px] top-3 bottom-3 w-px bg-gray-200 dark:bg-gray-800" />
+
+      <ul className="space-y-4">
+        {education.map((item, i) => (
+          <motion.li
+            key={i}
+            custom={i}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="relative pl-8"
+          >
+            <div
+              className={`absolute left-[5px] top-5 w-2.5 h-2.5 rounded-full ${dotColor[item.color]} ring-[3px] ring-white dark:ring-gray-900`}
+            />
+
+            <div className="bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700/60 rounded-xl p-4 sm:p-5 hover:border-primary-200 dark:hover:border-primary-800 transition-colors duration-200">
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-2">
+                <div className="flex items-start gap-2.5">
+                  <GraduationCap
+                    size={18}
+                    className="flex-shrink-0 mt-0.5 text-gray-400 dark:text-gray-500"
+                  />
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white leading-snug">
+                    {item.name}
+                  </h3>
+                </div>
+                <span
+                  className={`flex-shrink-0 text-sm px-3 py-1 rounded-full font-medium ${
+                    statusStyle[item.status] ?? statusStyle["Diplômé"]
+                  }`}
+                >
+                  {item.status}
+                </span>
+              </div>
+
+              <div className="pl-7 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <p className="text-base text-gray-500 dark:text-gray-400">
+                  {item.desc}
+                </p>
+                <p className="text-sm text-gray-400 dark:text-gray-500 italic flex-shrink-0">
+                  {item.start} – {item.end}
+                </p>
+              </div>
+            </div>
+          </motion.li>
+        ))}
+      </ul>
+    </div>
+  );
+}

@@ -1,0 +1,5 @@
+[
+  { "name": "Malagasy", "progress": 100, "level": "Langue maternelle", "flag": "🇲🇬", "link": "https://fr.wikipedia.org/wiki/Malgache" },
+  { "name": "Français", "progress": 70, "level": "Intermédiaire avancé", "flag": "🇫🇷", "link": "https://fr.wikipedia.org/wiki/Français" },
+  { "name": "Anglais", "progress": 50, "level": "Niveau technique", "flag": "🇬🇧", "link": "https://en.wikipedia.org/wiki/English_language" }
+]

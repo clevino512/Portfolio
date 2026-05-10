@@ -1,14 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
-import Home from './components/body/home.tsx'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Competence from './components/body/competence.tsx'
-import Contact from './components/body/contact.tsx'
-import Experience from './components/body/experience.tsx'
-import Project from './components/body/project.tsx'
-import Profil from './components/body/profil.tsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App.tsx';
+import Home from './components/body/home.tsx';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Competence from './components/body/competence.tsx';
+import Contact from './components/body/contact.tsx';
+import Experience from './components/body/experience.tsx';
+import Project from './components/body/project.tsx';
+import Profil from './components/body/profil.tsx';
+import './index.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

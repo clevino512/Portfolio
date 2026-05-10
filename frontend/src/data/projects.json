@@ -1,0 +1,56 @@
+[
+  {
+    "title": "UNM Sambava Madagascar",
+    "subtitle": "Site Web Template",
+    "image": "UNM.png",
+    "description": "Création de templates web professionnels et réutilisables : design UI soigné, structure optimisée et intégration facile.",
+    "link": "https://unm-7agc.vercel.app/",
+    "github": null,
+    "tags": ["React", "Tailwind CSS", "Responsive" , "UI Design", "Node/Express.js"]
+  },
+  {
+    "title": "Portfolio Professionnel",
+    "subtitle": "Site Web Template",
+    "image": "PORTFOLIO.png",
+    "description": "Conception et développement complet d'un portfolio moderne présentant mes services, projets et expériences en UI/UX et développement frontend.",
+    "link": "https://portfolio-six-theta-qsmr10tp8l.vercel.app/",
+    "github": "https://github.com/clevino512/portfolio",
+    "tags": ["React", "TypeScript", "Framer Motion", "Tailwind CSS", "Node/Express.js"]
+  },
+  {
+    "title": "Tsingy Rouge",
+    "subtitle": "Site Web - Hackathon 🏆",
+    "image": "Tsingy.png",
+    "description": "Réalisation d'un site web complet en 48 heures durant une compétition Hackathon, basé sur React et Laravel, avec une interface fluide et entièrement responsive.",
+    "link": "https://tsingyrouge.msi2025a.net/",
+    "github": "https://github.com/clevino512/tsingy-rouge",
+    "tags": ["React", "Laravel", "PHP", "MySQL", "Tailwind CSS"]
+  },
+  {
+    "title": "Design UI/UX",
+    "subtitle": "Logo & Création Visuelle",
+    "image": "ESPA.png",
+    "description": "Création de logos et visuels attractifs pour renforcer l'identité de marque, en utilisant des principes de design modernes et adaptés aux besoins clients.",
+    "link": "https://drive.google.com/drive/folders/1EGHeUniI6hrIJzknMaIBph338ulAiSdW",
+    "github": null,
+    "tags": ["Figma", "Photoshop", "Illustrator", "Branding"]
+  },
+  {
+    "title": "Endless Madagascar Tours",
+    "subtitle": "Design UI/UX - CMS complet",
+    "image": "endless.png",
+    "description": "Site web complet pour une agence de voyage, intégrant un CMS personnalisé pour la gestion facile des contenus, avec un design UI/UX optimisé pour une expérience utilisateur fluide et engageante.",
+    "link": "https://www.endlessmadagascartours.com",
+    "github": null,
+    "tags": ["Figma", "Laravel", "PHP", "MySQL", "UI Design", "UX Design", "E-commerce"]
+  },
+  {
+    "title": "Promabio Madagascar",
+    "subtitle": "Design UI/UX - CMS complet",
+    "image": "promabio.png",
+    "description": "Site web complet pour une entreprise de produits biologiques, intégrant un CMS personnalisé pour la gestion facile des contenus, avec un design UI/UX optimisé pour une expérience utilisateur fluide et engageante.",
+    "link": "https://www.promabio.mg",
+    "github": null,
+    "tags": ["Figma", "React/TailwindCss", "Node/Express.js", "MongoDb", "UI Design", "UX Design", "E-commerce"]
+  }
+]
