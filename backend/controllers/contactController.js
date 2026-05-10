@@ -13,6 +13,8 @@ export const handleContactForm = async (req, res) => {
       port: parseInt(process.env.MAIL_PORT),
       secure: false,
       family: 4,
+      connectionTimeout: 5000,
+      socketTimeout: 5000,
       auth: {
         user: process.env.MAIL_USERNAME,
         pass: process.env.MAIL_PASSWORD,
