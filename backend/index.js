@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json({ limit: '10kb' }));
 
 const corsOptions = {
-  origin: ['https://rabenantenaina-clevin.vercel.app', 'https://portfoliobackend-nu-mauve.vercel.app','http://localhost:5173', 'http://localhost:3001'],
+  origin: ['https://rabenantenaina-clevin.vercel.app', ],
   methods: ['GET', 'POST', 'OPTIONS'],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization'],
