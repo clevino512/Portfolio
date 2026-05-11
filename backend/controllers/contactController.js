@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 
 export const handleContactForm = async (req, res) => {
   const { name, email, subject, message } = req.body;
@@ -8,22 +8,11 @@ export const handleContactForm = async (req, res) => {
   }
 
   try {
-    const transporter = nodemailer.createTransport({
-      host: process.env.MAIL_HOST,
-      port: parseInt(process.env.MAIL_PORT),
-      secure: false,
-      family: 4,
-      connectionTimeout: 5000,
-      socketTimeout: 5000,
-      auth: {
-        user: process.env.MAIL_USERNAME,
-        pass: process.env.MAIL_PASSWORD,
-      },
-    });
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
-    const mailOptions = {
-      from: `"${name}" <${process.env.MAIL_FROM_ADDRESS}>`,
-      to: process.env.MAIL_FROM_ADDRESS,
+    await resend.emails.send({
+      from: `Portfolio <onboarding@resend.dev>`,
+      to: [process.env.MAIL_FROM_ADDRESS],
       replyTo: email,
       subject: `Portfolio - ${subject}`,
       html: `
@@ -37,11 +26,7 @@ export const handleContactForm = async (req, res) => {
           <p style="white-space: pre-wrap;">${message}</p>
         </div>
       `,
-    };
-
-    await transporter.sendMail(mailOptions);
-
-    console.log(`[${new Date().toLocaleString()}] ✅ Email envoyé avec succès par ${name}`);
+    });
 
     return res.status(200).json({
       success: true,
@@ -49,8 +34,7 @@ export const handleContactForm = async (req, res) => {
     });
 
   } catch (error) {
-    console.error(`[${new Date().toLocaleString()}] ❌ Erreur backend :`, error);
-
+    console.error(`[${new Date().toLocaleString()}] ❌ Erreur :`, error);
     return res.status(500).json({
       error: "Une erreur est survenue lors de l'envoi de l'email.",
       details: error.message,
