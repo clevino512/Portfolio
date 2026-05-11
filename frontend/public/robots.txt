@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rabenantenaina-clevin.vercel.app/sitemap.xml
+Host: rabenantenaina-clevin.vercel.app
