@@ -1,4 +1,5 @@
 import { useState} from "react";
+import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   MapPin, Phone, Mail, Copy, Check, Send, MessageCircle, X 
@@ -53,21 +54,18 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const res = await fetch("https://portfoliobackend-nu-mauve.vercel.app/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-    // try {
-    //   const res = await fetch("http://localhost:5000/api/contact", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(formData),
-    //   });
+      const response = await axios.post(
+        // "https://portfoliobackend-nu-mauve.vercel.app/api/contact",
+        "http://localhost:3001/api/contact",
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
-      const data = await res.json();
-
-      if (data.success) {
+      if (response.data.success) {
         setNotification({ message: "Message envoyé avec succès !", type: "success" });
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
@@ -75,7 +73,7 @@ export default function Contact() {
       }
     } catch (error) {
       console.error("Erreur :", error);
-      setNotification({ message: " Erreur serveur, réessayez plus tard", type: "error" });
+      setNotification({ message: "Erreur serveur, réessayez plus tard", type: "error" });
     } finally {
       setIsSubmitting(false);
     }
