@@ -1,5 +1,5 @@
 import { useState} from "react";
-import axios from "axios";
+import emailjs from "@emailjs/browser";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   MapPin, Phone, Mail, Copy, Check, Send, MessageCircle, X 
@@ -54,25 +54,24 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await axios.post(
-        "https://portfolio-aktc.onrender.com/api/contact",
-        formData,
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
-      if (response.data.success) {
-        setNotification({ message: "Message envoyé avec succès !", type: "success" });
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      } else {
-        setNotification({ message: "Erreur lors de l'envoi du message", type: "error" });
-      }
+      setNotification({ message: "Message envoyé avec succès !", type: "success" });
+      setFormData({ name: "", email: "", subject: "", message: "" });
+
     } catch (error) {
-      console.error("Erreur :", error);
-      setNotification({ message: "Erreur serveur, réessayez plus tard", type: "error" });
+      console.error("Erreur EmailJS :", error);
+      setNotification({ message: "Erreur lors de l'envoi du message", type: "error" });
     } finally {
       setIsSubmitting(false);
     }
