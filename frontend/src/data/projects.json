@@ -34,23 +34,5 @@
     "link": "https://drive.google.com/drive/folders/1EGHeUniI6hrIJzknMaIBph338ulAiSdW",
     "github": null,
     "tags": ["Figma", "Photoshop", "Illustrator", "Branding"]
-  },
-  {
-    "title": "Endless Madagascar Tours",
-    "subtitle": "Design UI/UX - CMS complet",
-    "image": "endless.png",
-    "description": "Site web complet pour une agence de voyage, intégrant un CMS personnalisé pour la gestion facile des contenus, avec un design UI/UX optimisé pour une expérience utilisateur fluide et engageante.",
-    "link": "https://www.endlessmadagascartours.com",
-    "github": null,
-    "tags": ["Figma", "Laravel", "PHP", "MySQL", "UI Design", "UX Design", "E-commerce"]
-  },
-  {
-    "title": "Promabio Madagascar",
-    "subtitle": "Design UI/UX - CMS complet",
-    "image": "promabio.png",
-    "description": "Site web complet pour une entreprise de produits biologiques, intégrant un CMS personnalisé pour la gestion facile des contenus, avec un design UI/UX optimisé pour une expérience utilisateur fluide et engageante.",
-    "link": "https://www.promabio.mg",
-    "github": null,
-    "tags": ["Figma", "React/TailwindCss", "Node/Express.js", "MongoDb", "UI Design", "UX Design", "E-commerce"]
   }
 ]
