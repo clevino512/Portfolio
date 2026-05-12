@@ -1,5 +1,13 @@
 User-agent: *
 Allow: /
+Disallow: /node_modules/
+Disallow: /.next/
+Disallow: /dist/
+Crawl-delay: 1
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
 
 Sitemap: https://rabenantenaina-clevin.vercel.app/sitemap.xml
 Host: rabenantenaina-clevin.vercel.app

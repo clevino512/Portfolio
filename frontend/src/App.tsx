@@ -10,6 +10,9 @@ import Footer from "./components/header/footer";
 import Navbar from "./components/header/side"; 
 import './index.css';
 
+// Declare gtag for TypeScript
+declare const gtag: Function;
+
 function App() {
   const topRef = useRef<HTMLDivElement>(null);
   
@@ -17,6 +20,26 @@ function App() {
      const saved = localStorage.getItem("theme");
     return saved === "dark" || (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches);
   });
+
+  // Track page views with GA4
+  useEffect(() => {
+    const handleHashChange = () => {
+      const path = window.location.pathname + window.location.hash;
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_view', {
+          page_path: path,
+          page_title: document.title
+        });
+      }
+    };
+
+    // Track initial pageview
+    handleHashChange();
+
+    // Track hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   useEffect(() => {
     const root = window.document.documentElement; 
