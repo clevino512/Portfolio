@@ -17,23 +17,8 @@
     "badges": ["Laravel", "React", "TypeScript", "Node.js", "REST API", "Docker", "MySQL", "Sanctum"]
   },
   {
-    "titre": "Développeur Frontend Stagiaire",
-    "entreprise": "Mahiratra Groupe Antalaha",
-    "date": "Octobre 2025 – Présent",
-    "type": "Stage",
-    "contenu": "Développement Frontend en React, TypeScript et Tailwind CSS",
-    "descriptions": [
-      "Développement de composants UI scalables (React, TypeScript, Tailwind CSS)",
-      "Conversion de maquettes Figma en interfaces HTML/CSS/JS responsives",
-      "Intégration back-end via REST APIs",
-      "Travail en équipe sur plateforme collaborative avec Git Flow",
-      "Rédaction de tests unitaires et fonctionnels (React Testing Library)"
-    ],
-    "badges": ["React", "TypeScript", "Tailwind CSS", "REST API", "Figma", "Git Flow", "RTL"]
-  },
-  {
     "titre": "Développeur Full Stack",
-    "entreprise": "Ornella Center · Mahiratra Groupe",
+   "entreprise": "Mahiratra Groupe Antalaha"
     "date": "Septembre 2025 – Janvier 2026",
     "type": "Stage",
     "contenu": "Développement full stack avec React, Node.js et déploiement Docker",
@@ -105,8 +90,8 @@
     "badges": ["Vente", "Animation commerciale", "Relation client", "Fidélisation"]
   },
   {
-    "titre": "Accès Bancaire / Service Client",
-    "entreprise": "Banque BTW · Diego-Suarez",
+    "titre": " Service Client BTW ",
+    "entreprise": "Accès Banque  · Diego-Suarez",
     "date": "2023",
     "type": "embauche",
     "contenu": "Accueil client et traitement des opérations bancaires",
