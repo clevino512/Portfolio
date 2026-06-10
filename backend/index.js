@@ -2,6 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import contactRoutes from './routes/contact.js';
+import testimonialsRoutes from './routes/testimonials.js';
 import serverless from 'serverless-http';
 
 const app = express();
@@ -29,6 +30,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/contact', contactRoutes);
+app.use('/api/testimonials', testimonialsRoutes);
 
 app.use((err, req, res, next) => {
   console.error('[ERROR]', err.stack);

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "t001",
+    "name": "Andry Rakotonirina",
+    "role": "Directeur Technique",
+    "company": "Mahiratra Groupe",
+    "avatar": "AR",
+    "color": "from-primary-500 to-indigo-600",
+    "text": "Clévin a fait preuve d'une grande rigueur technique et d'une capacité à livrer des fonctionnalités complexes dans des délais serrés. Son expertise en React et Node.js, combinée à sa maîtrise de Docker, en fait un développeur full stack de très bon niveau. Très agréable à coacher et capable de monter en compétences rapidement.",
+    "rating": 5,
+    "relation": "Superviseur direct",
+    "submittedAt": "2026-01-20T08:00:00.000Z",
+    "status": "approved"
+  },
+  {
+    "id": "t002",
+    "name": "Hery Rasolofoson",
+    "role": "CEO & Co-fondateur",
+    "company": "RAVINALA Digital",
+    "avatar": "HR",
+    "color": "from-emerald-500 to-teal-600",
+    "text": "Clévin a développé notre plateforme e-commerce de bout en bout avec Laravel et React. Sa compréhension des besoins métier, sa proactivité et la qualité de son code ont dépassé nos attentes. Il gère aussi bien les APIs REST que les interfaces utilisateur et le déploiement. Je recommande sans hésitation.",
+    "rating": 5,
+    "relation": "Client freelance",
+    "submittedAt": "2026-02-10T10:30:00.000Z",
+    "status": "approved"
+  },
+  {
+    "id": "t003",
+    "name": "Mialy Andrianirina",
+    "role": "UX Lead Designer",
+    "company": "Freelance",
+    "avatar": "MA",
+    "color": "from-violet-500 to-purple-600",
+    "text": "J'ai collaboré avec Clévin sur plusieurs projets UI/UX. Il traduit parfaitement les maquettes Figma en interfaces pixel-perfect avec des animations fluides. Sa sensibilité design est rare pour un développeur full stack — il comprend les enjeux UX et propose des améliorations pertinentes.",
+    "rating": 5,
+    "relation": "Collaboratrice",
+    "submittedAt": "2026-03-05T14:00:00.000Z",
+    "status": "approved"
+  },
+  {
+    "id": "t004",
+    "name": "Fanja Rabemanantsoa",
+    "role": "Chef de Projet",
+    "company": "Vahatra Center",
+    "avatar": "FR",
+    "color": "from-amber-500 to-orange-600",
+    "text": "Lors du hackathon organisé par Vahatra Center, Clévin et son équipe ont livré une application complète en 48h, ce qui leur a valu la première place. Son leadership technique, sa capacité à coder sous pression et la qualité du rendu final ont impressionné tout le jury.",
+    "rating": 5,
+    "relation": "Organisateur Hackathon",
+    "submittedAt": "2026-03-18T09:00:00.000Z",
+    "status": "approved"
+  },
+  {
+    "id": "t005",
+    "name": "Solofonirina Rakotondrabe",
+    "role": "Développeur Senior",
+    "company": "Freelance",
+    "avatar": "SR",
+    "color": "from-rose-500 to-pink-600",
+    "text": "Clévin est un développeur sérieux, autonome et passionné. Son code est propre, bien structuré et documenté. Il maîtrise les bonnes pratiques (SOLID, clean code, Git Flow) et s'intègre rapidement dans une équipe. Un collaborateur fiable sur qui on peut compter.",
+    "rating": 5,
+    "relation": "Pair de développement",
+    "submittedAt": "2026-04-02T11:00:00.000Z",
+    "status": "approved"
+  }
+]
