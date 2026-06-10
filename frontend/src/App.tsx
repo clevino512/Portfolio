@@ -4,6 +4,7 @@ import Profil from "./components/body/profil";
 import Experiences from "./components/body/experience";
 import Project from "./components/body/project";
 import Competence from "./components/body/competence";
+import Testimonials from "./components/body/testimonials";
 import Contact from "./components/body/contact";
 import FooterNavs from "./components/header/FooterNavs";
 import Footer from "./components/header/footer";
@@ -79,6 +80,11 @@ function App() {
         {/* Projects — white bg */}
         <section id="project" className="border-t border-gray-100 dark:border-gray-800/60">
           <Project />
+        </section>
+
+        {/* Testimonials — white bg */}
+        <section id="testimonials" className="border-t border-gray-100 dark:border-gray-800/60">
+          <Testimonials />
         </section>
 
         {/* Contact — gray bg (handled inside component) */}

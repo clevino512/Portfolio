@@ -18,6 +18,7 @@ export default function Navbar({ darkMode, toggleDarkMode }: NavbarProps) {
     { name: "Expériences", id: "experiences" },
     { name: "Compétences", id: "competence" },
     { name: "Projets", id: "project" },
+    { name: "Témoignages", id: "testimonials" },
     { name: "Contact", id: "contact" },
   ];
 
