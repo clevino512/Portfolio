@@ -15,7 +15,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="*" element={<App />} />
+        
         <Route path="/home" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/formation" element={<Experience />} />
@@ -23,6 +23,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/certifications" element={<Competence />} />
         <Route path="/profil" element={<Profil />} />
         <Route path="/cv" element={<CV />} />
+        <Route path="*" element={<App />} />
         
       </Routes>
     </BrowserRouter>
