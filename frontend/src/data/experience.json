@@ -1,24 +1,24 @@
 [
   {
-    "titre": "Chef IT & Développeur Full Stack Senior",
+    "titre": "Chef IT & Développeur Full Stack ",
     "entreprise": "RAVINALA Digital",
     "date": "Février 2026 – Présent",
     "type": "Freelance",
-    "contenu": "Pilotage technique et développement d'applications web full stack (Laravel, React, Node.js/Fastify) avec gestion d'équipe Agile et supervision d'infrastructures VPS Linux.",
+    "contenu": "Pilotage technique et développement d'applications web full stack (Laravel, React) avec gestion d'équipe Agile.",
     "descriptions": [
-      "Leadership technique d'une équipe de 3 développeurs en méthodologie Agile/Scrum — gestion du backlog, rédaction des User Stories et suivi des sprints sur Jira",
+      "Gestion du backlog, rédaction des User Stories et suivi des sprints sur Jira",
       "Conception et maintenance d'architectures API REST modulaires, sécurisées et scalables avec Laravel (Sanctum, Spatie RBAC, Form Requests, API Resources, Eloquent ORM)",
       "Développement de la plateforme e-commerce ASAP full stack : catalogue, panier, paiement Mobile Money, intégration passerelles Stripe + MVola et gestion webhooks",
-      "Déploiement, configuration et supervision d'infrastructures VPS Linux sous Nginx (PHP-FPM, SSL, reverse proxy, monitoring applicatif)",
+      "Déploiement, configuration et supervision d'infrastructures VPS Linux sous Nginx ",
       "Sécurisation des endpoints : authentification JWT, politiques RBAC fines, conformité OWASP Top 10, audit de vulnérabilités",
       "Optimisation SEO technique avancée : sitemaps dynamiques, balises méta structurées, Core Web Vitals (LCP, CLS, FID), Schema.org, stratégie de crawl",
       "Automatisation des workflows, versioning avancé Git Flow (branches feature, PR, code review) et pipelines CI/CD GitHub Actions",
       "Développement d'applications React/TypeScript complexes : Hooks, Context API, Redux, lazy loading, memoization, bundle optimization",
       "Intégration APIs REST & GraphQL, services tiers : paiement, email (SMTP/Mailgun), SMS, notifications push",
-      "Livraison clients PME : aikovoyage.com, uvanilla.com, promabio.com — refonte, SEO, déploiement automatisé"
+      "Livraison clients PME , refonte, SEO, déploiement automatisé"
     ],
     "badges": [
-      "Laravel", "PHP 8.x", "Fastify", "Node.js", "React", "TypeScript",
+      "Laravel", "PHP 8.x", "React", "TypeScript",
       "Prisma", "Eloquent ORM", "REST API", "GraphQL",
       "MySQL", "PostgreSQL", "MongoDB", "Redis",
       "Docker", "Linux/Nginx", "CI/CD", "GitHub Actions",
@@ -63,11 +63,11 @@
     ]
   },
   {
-    "titre": "Développeur Frontend — 1ère Place Hackathon 🥇",
+    "titre": "Développeur Frontend — 1ère Place Hackathon ",
     "entreprise": "Vahatra Center Diego-Suarez",
     "date": "Août 2025",
     "type": "Hackathon",
-    "contenu": "Développement complet d'une plateforme web collaborative full stack en 48h — Dashboard temps réel avec KPIs, gestion de projets & tâches, REST API avec auth & rôles utilisateurs. 1ère place 🥇",
+    "contenu": "Développement complet d'une plateforme web collaborative full stack en 48h.",
     "descriptions": [
       "Architecture et développement full stack d'une plateforme collaborative en 48h : React + Laravel + MySQL + REST API",
       "Dashboard temps réel avec suivi de l'avancement global, KPIs dynamiques, graphiques Chart.js et indicateurs de performance",
