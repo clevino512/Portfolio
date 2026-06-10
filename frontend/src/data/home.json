@@ -1,19 +1,25 @@
 {
-  "badge": "Disponible pour missions",
+  "badge": "Disponible · Open to work",
   "title": "Développeur Full Stack",
+  "subtitle": "& UI/UX Designer",
   "name": "RABENANTENAINA Clévin",
-  "description": "Développeur Full Stack passionné, je conçois des applications web complètes, de l'architecture backend à l'interface utilisateur.",
-  "quickSkills": ["TypeScript", "Laravel/Symfony", "Python", "Node/Express"],
+  "description": "Développeur Full Stack avec 5+ ans d'expérience, je conçois et livre des applications web modernes — de l'architecture backend robuste aux interfaces utilisateur soignées.",
+  "quickSkills": ["React / TypeScript", "Laravel / Node.js", "Docker / VPS", "Figma / UI/UX"],
   "skills": [
-    { "icon": "Code2", "title": "Frontend", "items": ["React", "TypeScript", "Tailwind CSS"] },
-    { "icon": "Palette", "title": "UI/UX", "items": ["Figma", "Photoshop", "Illustrator"] },
-    { "icon": "Users", "title": "Leadership", "items": ["Agile/Scrum", "Team Management", "Code Review"] },
-    { "icon": "Globe", "title": "Backend", "items": ["Node.js", "Laravel", "MongoDB"] }
+    { "icon": "Code2", "title": "Frontend", "items": ["React", "TypeScript", "Tailwind CSS", "Framer Motion"] },
+    { "icon": "Palette", "title": "UI/UX Design", "items": ["Figma", "Photoshop", "Illustrator"] },
+    { "icon": "Users", "title": "Méthodes", "items": ["Agile/Scrum", "Code Review", "Git Flow"] },
+    { "icon": "Globe", "title": "Backend", "items": ["Laravel", "Node.js", "MongoDB", "Docker"] }
   ],
   "socialLinks": [
     { "icon": "Github", "href": "https://github.com/clevino512", "label": "GitHub" },
-    { "icon": "Linkedin", "href": "https://linkedin.com/in/rabenantenaina-clevin", "label": "LinkedIn" },
-    { "icon": "Facebook", "href": "https://www.facebook.com/clevin.s.gertz.le.prophete/", "label": "Facebook" }
+    { "icon": "Linkedin", "href": "https://www.linkedin.com/in/rabenantenaina-cl%C3%A9vin-4a727314b/", "label": "LinkedIn" },
+    { "icon": "Whatsapp", "href": "https://wa.me/261386334120", "label": "WhatsApp" }
   ],
-  "quote": "Transformer les idées en expériences digitales mémorables"
+  "quote": "Transformer les idées en expériences digitales mémorables",
+  "stats": [
+    { "value": "5+", "label": "Années d'exp." },
+    { "value": "10+", "label": "Projets livrés" },
+    { "value": "8+", "label": "Clients satisfaits" }
+  ]
 }

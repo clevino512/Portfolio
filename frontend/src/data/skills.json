@@ -1,73 +1,86 @@
 {
   "categories": [
     {
-      "title": "Frameworks",
+      "title": "Frontend",
+      "icon": "Monitor",
       "outils": [
         { "name": "React.js", "niveau": "avancé" },
+        { "name": "TypeScript", "niveau": "avancé" },
+        { "name": "Tailwind CSS", "niveau": "avancé" },
         { "name": "Vue.js", "niveau": "intermédiaire" },
-        { "name": "Django / Tkinter", "niveau": "intermédiaire" },
-        { "name": "Flutter", "niveau": "débutant" }
+        { "name": "Framer Motion", "niveau": "intermédiaire" }
       ]
     },
     {
-      "title": "API & Services REST",
+      "title": "Backend",
+      "icon": "Server",
       "outils": [
-        { "name": "Axios", "niveau": "avancé" },
-        { "name": "Fetch API", "niveau": "intermédiaire" },
-        { "name": "REST Architecture", "niveau": "intermédiaire" }
-      ]
-    },
-    {
-      "title": "Suite Adobe Creative",
-      "outils": [
-        { "name": "InDesign", "niveau": "intermédiaire" },
-        { "name": "Photoshop", "niveau": "avancé" },
-        { "name": "Illustrator", "niveau": "intermédiaire" },
-        { "name": "Premiere Pro", "niveau": "intermédiaire" }
-      ]
-    },
-    {
-      "title": "Outils de conception & prototypage",
-      "outils": [
-        { "name": "Figma", "niveau": "intermédiaire" },
-        { "name": "Draw.io", "niveau": "intermédiaire" }
+        { "name": "Laravel / PHP", "niveau": "avancé" },
+        { "name": "Node.js / Express", "niveau": "avancé" },
+        { "name": "REST API", "niveau": "avancé" },
+        { "name": "Django", "niveau": "intermédiaire" },
+        { "name": "GraphQL", "niveau": "intermédiaire" }
       ]
     },
     {
       "title": "Bases de données",
+      "icon": "Database",
       "outils": [
-        { "name": "MySQL", "niveau": "intermédiaire" },
-        { "name": "SQL", "niveau": "intermédiaire" },
+        { "name": "MySQL / SQL", "niveau": "avancé" },
         { "name": "PostgreSQL", "niveau": "intermédiaire" },
-        { "name": "MongoDB", "niveau": "débutant" }
+        { "name": "MongoDB", "niveau": "intermédiaire" },
+        { "name": "Eloquent ORM", "niveau": "avancé" }
       ]
     },
     {
-      "title": "Outils de développement",
+      "title": "DevOps & Outils",
+      "icon": "GitBranch",
       "outils": [
-        { "name": "Git", "niveau": "avancé" },
+        { "name": "Git / GitHub", "niveau": "avancé" },
         { "name": "Docker", "niveau": "intermédiaire" },
-        { "name": "VPS Linux", "niveau": "intermédiaire" }
+        { "name": "VPS Linux / Nginx", "niveau": "intermédiaire" },
+        { "name": "CI/CD", "niveau": "intermédiaire" }
       ]
     },
     {
-      "title": "Systèmes de paiement",
+      "title": "Design & Prototypage",
+      "icon": "Figma",
       "outils": [
-        { "name": "Mobile Money", "niveau": "intermédiaire" },
-        { "name": "Stripe", "niveau": "intermédiaire" },
-        { "name": "PayPal", "niveau": "intermédiaire" }
+        { "name": "Figma", "niveau": "intermédiaire" },
+        { "name": "Photoshop", "niveau": "avancé" },
+        { "name": "Illustrator", "niveau": "intermédiaire" },
+        { "name": "InDesign", "niveau": "intermédiaire" }
       ]
-     },
+    },
     {
-      "title": "Admiinistration de systèmes & Réseaux",
+      "title": "Paiement & Sécurité",
+      "icon": "ShieldCheck",
       "outils": [
-        { "name": "System Administration", "niveau": "intermédiaire" },
-        { "name": "TCP/IP", "niveau": "avancé" },
-        { "name": "Sécurité Réseau", "niveau": "intermédiaire" },
-        { "name": "Configuration de Réseaux", "niveau": "avancé" },
-        { "name": "Linux", "niveau": "intermédiaire" },
-        { "name": "Windows Server", "niveau": "intermédiaire" }
+        { "name": "Stripe", "niveau": "intermédiaire" },
+        { "name": "Mobile Money", "niveau": "intermédiaire" },
+        { "name": "JWT / Sanctum", "niveau": "avancé" },
+        { "name": "RBAC / Permissions", "niveau": "avancé" }
       ]
-  }
+    },
+    {
+      "title": "Administration Systèmes",
+      "icon": "Terminal",
+      "outils": [
+        { "name": "Linux", "niveau": "intermédiaire" },
+        { "name": "Windows Server", "niveau": "intermédiaire" },
+        { "name": "TCP/IP", "niveau": "avancé" },
+        { "name": "Sécurité Réseau", "niveau": "intermédiaire" }
+      ]
+    },
+    {
+      "title": "Frameworks & Autres",
+      "icon": "Layers",
+      "outils": [
+        { "name": "Flutter", "niveau": "débutant" },
+        { "name": "Axios / Fetch API", "niveau": "avancé" },
+        { "name": "PayPal API", "niveau": "intermédiaire" },
+        { "name": "Premiere Pro", "niveau": "intermédiaire" }
+      ]
+    }
   ]
 }
