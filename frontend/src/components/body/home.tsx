@@ -3,6 +3,9 @@ import { motion, useInView } from 'framer-motion';
 import { Code2, Palette, Users, Globe, Sparkles, ArrowRight, FileText } from 'lucide-react';
 import homeData from "../../data/home.json";
 import { FaFacebookF, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+
+const MotionLink = motion(Link);
 
 const iconMap = {
   Code2: Code2,
@@ -177,15 +180,15 @@ export default function Home() {
                 <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform" />
               </motion.button>
 
-              <motion.a
-                href="/cv"
+              <MotionLink
+                to="/cv"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
                 className="flex items-center gap-2 px-7 py-3.5 bg-transparent border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-primary-500 dark:hover:border-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-semibold rounded-full transition-all duration-300"
               >
                 <FileText size={17} />
                 Voir mon CV
-              </motion.a>
+              </MotionLink>
             </motion.div>
 
             {/* Social links */}
