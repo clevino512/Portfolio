@@ -10,6 +10,7 @@ import imgTsingy from "../../assets/Tsingy.png";
 import imgESPA from "../../assets/ESPA.png";
 import imgEndless from "../../assets/endless.png";
 import imgPromabio from "../../assets/promabio.png";
+import imgAiko from "../../assets/aikovoyage.png";
 
 const imageMap: Record<string, string> = {
   "UNM.png": imgUNM,
@@ -18,6 +19,7 @@ const imageMap: Record<string, string> = {
   "ESPA.png": imgESPA,
   "endless.png": imgEndless,
   "promabio.png": imgPromabio,
+  "aikovoyage.png": imgAiko
 };
 
 interface Project {

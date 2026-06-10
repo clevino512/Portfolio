@@ -6,7 +6,26 @@
     "description": "Création de templates web professionnels et réutilisables : design UI soigné, structure optimisée et intégration facile.",
     "link": "https://unm-7agc.vercel.app/",
     "github": null,
-    "tags": ["React", "Tailwind CSS", "Responsive" , "UI Design", "Node/Express.js"]
+    "tags": ["React", "Tailwind CSS", "Responsive" , "UI Design", "Node/Express.js", "Agile/Scrum"]
+  },
+
+    {
+    "title": "Endless Madagascar Tours",
+    "subtitle": "Design UI/UX - CMS complet - SEO",
+    "image": "endless.png",
+    "description": "Site web complet pour une agence de voyage et tourisme , intégrant un CMS personnalisé pour la gestion facile des contenus, avec un design UI/UX optimisé pour une expérience utilisateur fluide et engageante.",
+    "link": "https://www.endlessmadagascartours.com",
+    "github": null,
+    "tags": ["Figma", "Laravel", "PHP", "MySQL", "Inertia", "UX Design", "E-commerce"]
+  },
+    {
+    "title": "Sombin'ny Aiko Voyage",
+    "subtitle": "Design UI/UX - CMS complet - SEO",
+    "image": "aikovoyage.png",
+    "description": "Site web complet pour une agence de voyage, intégrant un CMS personnalisé pour la gestion facile des contenus, avec un design UI/UX optimisé pour une expérience utilisateur fluide et engageante.",
+    "link": "https://www.aikovoyage.com",
+    "github": null,
+    "tags": ["Figma", "Laravel", "PHP", "MySQL", "UI Design", "UX Design", "E-commerce"]
   },
   {
     "title": "Portfolio Professionnel",
@@ -19,7 +38,7 @@
   },
   {
     "title": "Tsingy Rouge",
-    "subtitle": "Site Web - Hackathon 🏆",
+    "subtitle": "Site Web - Hackathon ",
     "image": "Tsingy.png",
     "description": "Réalisation d'un site web complet en 48 heures durant une compétition Hackathon, basé sur React et Laravel, avec une interface fluide et entièrement responsive.",
     "link": "https://tsingyrouge.msi2025a.net/",
@@ -34,14 +53,6 @@
     "link": "https://drive.google.com/drive/folders/1EGHeUniI6hrIJzknMaIBph338ulAiSdW",
     "github": null,
     "tags": ["Figma", "Photoshop", "Illustrator", "Branding"]
-  },
-  {
-    "title": "Endless Madagascar Tours",
-    "subtitle": "Design UI/UX - CMS complet",
-    "image": "endless.png",
-    "description": "Site web complet pour une agence de voyage, intégrant un CMS personnalisé pour la gestion facile des contenus, avec un design UI/UX optimisé pour une expérience utilisateur fluide et engageante.",
-    "link": "https://www.endlessmadagascartours.com",
-    "github": null,
-    "tags": ["Figma", "Laravel", "PHP", "MySQL", "UI Design", "UX Design", "E-commerce"]
   }
+
 ]

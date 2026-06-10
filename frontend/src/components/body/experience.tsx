@@ -90,7 +90,7 @@ export default function Experiences() {
       ref={sectionRef}
       className="w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950 transition-colors duration-300"
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
 
         {/* Section header */}
         <motion.div

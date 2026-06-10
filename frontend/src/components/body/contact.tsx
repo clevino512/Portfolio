@@ -303,7 +303,7 @@ export default function Contact() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="Jean Dupont"
+                        placeholder="Ra Gertz"
                         required
                         className={inputClass}
                       />
@@ -317,7 +317,7 @@ export default function Contact() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="jean@exemple.com"
+                        placeholder="clevino512@gmail.com"
                         required
                         className={inputClass}
                       />

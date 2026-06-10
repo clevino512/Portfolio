@@ -39,11 +39,11 @@
     "contenu": "Développement full stack sur plateforme métier (gestion des stocks) avec React/TypeScript, Node.js/Express, déploiement Docker et pipelines CI/CD en environnement Agile.",
     "descriptions": [
       "Développement React/TypeScript : composants réutilisables, architecture modulaire, clean code, ESLint, optimisation rendering (lazy loading, React.memo, useMemo)",
-      "Conception et implémentation API REST Node.js/Express — authentification JWT, gestion des rôles RBAC, middleware de sécurité",
-      "Développement module métier gestion de stocks avec Laravel + Inertia.js / React — intégration Figma en interfaces pixel-perfect",
-      "Déploiement Docker & pipelines CI/CD — containerisation des services, optimisation des performances frontend et réduction du bundle size",
+      "Conception et implémentation API REST Node.js/Express , authentification JWT, gestion des rôles RBAC, middleware de sécurité",
+      "Développement module métier gestion de stocks avec Laravel + Inertia.js / React , intégration Figma en interfaces pixel-perfect",
+      "Déploiement Docker & pipelines CI/CD , containerisation des services, optimisation des performances frontend et réduction du bundle size",
       "Gestion et structuration de bases de données MongoDB (modélisation NoSQL, indexation, optimisation des requêtes)",
-      "Rédaction de tests unitaires et fonctionnels avec React Testing Library & PHPUnit/Pest — couverture de code > 75%",
+      "Rédaction de tests unitaires et fonctionnels avec React Testing Library & PHPUnit/Pest , couverture de code > 75%",
       "Collaboration cross-fonctionnelle : Product Owners, UX/UI designers, sprints Agile/Scrum bihebdomadaires, rétrospectives",
       "Workflow Git Flow collaboratif : branches feature, Pull Requests, code review structuré, merge conflicts resolution"
     ],
@@ -70,9 +70,9 @@
     "descriptions": [
       "Architecture et développement full stack d'une plateforme collaborative en 48h : React + Laravel + MySQL + REST API",
       "Dashboard temps réel avec suivi de l'avancement global, KPIs dynamiques, graphiques Chart.js et indicateurs de performance",
-      "Gestion de projets, tâches et jalons — workflows collaboratifs avec attribution des rôles utilisateurs",
+      "Gestion de projets, tâches et jalons , workflows collaboratifs avec attribution des rôles utilisateurs",
       "Backend REST API Laravel avec authentification sécurisée, gestion des rôles (admin/manager/contributeur) et middleware de protection",
-      "Interface responsive mobile + desktop avec Tailwind CSS — intégration fidèle de maquettes Figma sous contrainte de temps",
+      "Interface responsive mobile + desktop avec Tailwind CSS , intégration fidèle de maquettes Figma sous contrainte de temps",
       "Optimisation des performances UI/UX : accessibilité, Core Web Vitals, expérience utilisateur sous pression temps réel",
       "Base de données relationnelle MySQL : modélisation entités-relations, migrations, requêtes optimisées"
     ],
@@ -93,11 +93,11 @@
     "entreprise": "École Polytechnique d'Antsiranana",
     "date": "Janvier 2025 – Août 2025",
     "type": "Mission académique",
-    "contenu": "Collecte, traitement et visualisation de données académiques — Dashboard analytique PHP/Chart.js avec automatisation des rapports et stockage PostgreSQL.",
+    "contenu": "Collecte, traitement et visualisation de données académiques , Dashboard analytique PHP/Chart.js avec automatisation des rapports et stockage PostgreSQL.",
     "descriptions": [
       "Collecte, nettoyage et structuration de jeux de données académiques pour analyse statistique (ETL pipeline)",
       "Conception d'un tableau de bord analytique (PHP natif + Chart.js) pour visualiser les KPIs institutionnels en temps réel",
-      "Automatisation des rapports périodiques via scripts PHP/Shell — génération automatique et distribution par email",
+      "Automatisation des rapports périodiques via scripts PHP/Shell , génération automatique et distribution par email",
       "Administration et optimisation d'une base de données PostgreSQL : indexation, vues matérialisées, optimisation des requêtes",
       "Modélisation des données : entités-relations, normalisation, procédures stockées"
     ],
@@ -116,13 +116,13 @@
     "entreprise": "Indépendant · Madagascar",
     "date": "2022 – Présent",
     "type": "Freelance",
-    "contenu": "Développement d'applications web et mobiles hybrides pour clients PME malgaches — livraison de A à Z : architecture, développement, déploiement, SEO et maintenance.",
+    "contenu": "Développement d'applications web et mobiles hybrides pour clients PME malgaches , livraison de A à Z : architecture, développement, déploiement, SEO et maintenance.",
     "descriptions": [
-      "Développement d'applications mobiles hybrides React Native (iOS/Android) orientées services — architecture Expo, navigation React Navigation, state management Redux/Zustand",
+      "Développement d'applications mobiles hybrides React Native (iOS/Android) orientées services , architecture Expo, navigation React Navigation, state management Redux/Zustand",
       "Livraison de sites vitrine et e-commerce performants pour clients PME : aikovoyage.com, uvanilla.com, promabio.com",
       "Architecture et développement full stack : PHP natif, React.js, Node.js, API REST, intégration Mobile Money",
       "Administration serveur VPS Linux : configuration Nginx, SSL/TLS, sécurité, backup automatisé, monitoring",
-      "Déploiement automatisé et maintenance corrective en autonomie complète — SLA respecté, satisfaction client",
+      "Déploiement automatisé et maintenance corrective en autonomie complète , SLA respecté, satisfaction client",
       "Gestion de projet autonome : cahier des charges, estimation, livraison dans les délais, communication client",
       "Optimisation SEO : audit technique, stratégie de contenu, Google Search Console, PageSpeed Insights"
     ],
@@ -143,7 +143,7 @@
     "entreprise": "Freelance",
     "date": "2023 – Présent",
     "type": "Freelance",
-    "contenu": "Création de visuels graphiques, identités visuelles et templates web modernes — intégration Figma-to-code pixel-perfect, design UI/UX orienté conversion.",
+    "contenu": "Création de visuels graphiques, identités visuelles et templates web modernes , intégration Figma-to-code pixel-perfect, design UI/UX orienté conversion.",
     "descriptions": [
       "Conception d'identités visuelles complètes : logos, chartes graphiques, guidelines de marque pour PME",
       "Design UI/UX : wireframing, prototypage Figma, maquettes haute fidélité, tests utilisateurs",
@@ -170,7 +170,7 @@
     "entreprise": "UNICEF · Madagascar",
     "date": "2018",
     "type": "Mission",
-    "contenu": "Collecte de données sociales à grande échelle pour le Programme d'Enquête UNICEF MICS6 (Multiple Indicator Cluster Survey) — rigueur méthodologique et gestion terrain.",
+    "contenu": "Collecte de données sociales à grande échelle pour le Programme d'Enquête UNICEF MICS6 (Multiple Indicator Cluster Survey) , rigueur méthodologique et gestion terrain.",
     "descriptions": [
       "Collecte de données sociales terrain dans le cadre du programme international UNICEF MICS6",
       "Conduite d'entretiens structurés auprès des ménages selon protocoles d'enquête standardisés",
@@ -193,7 +193,7 @@
     "entreprise": "Plateforme KINGA · Diego-Suarez",
     "date": "2023",
     "type": "Emploi",
-    "contenu": "Animation commerciale, promotion de services et gestion de la relation client en face-à-face — développement des compétences en communication et fidélisation.",
+    "contenu": "Animation commerciale, promotion de services et gestion de la relation client en face-à-face , développement des compétences en communication et fidélisation.",
     "descriptions": [
       "Animation de stands commerciaux et présentation de produits/services auprès du grand public",
       "Développement des techniques de vente directe et argumentation commerciale",
@@ -214,7 +214,7 @@
     "entreprise": "Accès Banque · Diego-Suarez",
     "date": "2023",
     "type": "Emploi",
-    "contenu": "Accueil client, orientation et traitement des opérations bancaires courantes — rigueur procédurale et confidentialité dans un environnement financier réglementé.",
+    "contenu": "Accueil client, orientation et traitement des opérations bancaires courantes, rigueur procédurale et confidentialité dans un environnement financier réglementé.",
     "descriptions": [
       "Accueil, orientation et accompagnement des clients dans leurs démarches bancaires",
       "Traitement des demandes de prêt : analyse des dossiers, vérification des pièces justificatives",
@@ -237,13 +237,13 @@
     "entreprise": "Radio MBS & Radio 2000",
     "date": "2019 – 2023",
     "type": "Stage",
-    "contenu": "Animation radio, reportages en direct, production éditoriale et gestion régie son — développement des compétences en communication orale, storytelling et gestion du direct.",
+    "contenu": "Animation radio, reportages en direct, production éditoriale et gestion régie son développement des compétences en communication orale, storytelling et gestion du direct.",
     "descriptions": [
-      "Rédaction et présentation de reportages en direct — maîtrise de la prise de parole publique et du storytelling",
+      "Rédaction et présentation de reportages en direct  maîtrise de la prise de parole publique et du storytelling",
       "Couverture d'événements locaux : reportages terrain, interviews et synthèse éditoriale",
       "Initiation aux techniques de prise de son, mixage audio et montage numérique",
       "Animation d'émissions locales, préparation de contenus éditoriaux et conducteurs d'émission",
-      "Gestion de la régie son et interaction en direct avec les auditeurs — capacité à gérer la pression du live",
+      "Gestion de la régie son et interaction en direct avec les auditeurs, capacité à gérer la pression du live",
       "Veille informationnelle et fact-checking des sources pour garantir la fiabilité des contenus diffusés"
     ],
     "badges": [
@@ -261,7 +261,7 @@
     "entreprise": "Formation Professionnelle",
     "date": "2022",
     "type": "Formation",
-    "contenu": "Formation pratique en installation électrique résidentielle, lecture de schémas et câblage de tableaux — compétences transverses en lecture de documentation technique.",
+    "contenu": "Formation pratique en installation électrique résidentielle, lecture de schémas et câblage de tableaux, compétences transverses en lecture de documentation technique.",
     "descriptions": [
       "Formation pratique en installation électrique résidentielle selon normes en vigueur",
       "Lecture et interprétation de schémas électriques unifilaires et multifilaires",
