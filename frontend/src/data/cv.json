@@ -13,125 +13,288 @@
     "birthDate": "2000",
     "nationality": "Malgache"
   },
-  "about": "Développeur Full Stack passionné avec plus de 3 ans d'expérience dans la conception et le développement d'applications web modernes. Expert en React, TypeScript et Laravel, je combine compétences techniques et sens du design pour créer des expériences utilisateur exceptionnelles.",
+
+  "about": "Développeur Full Stack & UI/UX Designer avec plus de 5 ans d'expérience dans la conception et le déploiement d'applications web robustes, scalables et orientées expérience utilisateur. Spécialisé en React/TypeScript, Laravel et Node.js/Fastify, je conçois des architectures API REST sécurisées, pilote des équipes techniques en Agile/Scrum et livre des interfaces pixel-perfect à partir de maquettes Figma. Orienté qualité de code, architecture propre (SOLID, MVC, Design Patterns) et livraison continue en environnement CI/CD.",
+
   "skills": {
     "frontend": {
       "name": "Frontend",
-      "items": ["React.js", "TypeScript", "Tailwind CSS", "Next.js", "Vue.js"]
+      "items": [
+        "React.js", "TypeScript", "Next.js", "Vue.js", "Inertia.js",
+        "Tailwind CSS", "Framer Motion", "GSAP",
+        "Redux", "Context API", "React Testing Library",
+        "Webpack", "Vite", "ESLint", "Prettier"
+      ]
     },
     "backend": {
       "name": "Backend",
-      "items": ["Node.js", "Laravel", "Python/Django", "Express.js", "PHP"]
+      "items": [
+        "Laravel", "PHP 8.x", "Node.js", "Fastify", "Express.js",
+        "REST API", "GraphQL", "WebSocket",
+        "JWT", "OAuth2", "Sanctum", "Spatie RBAC",
+        "PHPUnit", "Pest", "Jest"
+      ]
     },
     "database": {
       "name": "Base de données",
-      "items": ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
+      "items": [
+        "MySQL", "PostgreSQL", "MongoDB", "Redis",
+        "Eloquent ORM", "Prisma", "Query Builder",
+        "Migrations versionnées", "Indexation avancée"
+      ]
+    },
+    "devops": {
+      "name": "DevOps & Infrastructure",
+      "items": [
+        "Docker", "Linux / Nginx", "CI/CD", "GitHub Actions",
+        "Git Flow", "VPS Administration",
+        "SSL/TLS", "PHP-FPM", "Monitoring applicatif"
+      ]
     },
     "design": {
       "name": "Design & UI/UX",
-      "items": ["Figma", "Photoshop", "Illustrator", "Premiere Pro"]
+      "items": [
+        "Figma", "Photoshop", "Illustrator", "Premiere Pro",
+        "Design System", "Wireframing", "Prototypage",
+        "Pixel-perfect", "Responsive Design", "Accessibilité"
+      ]
+    },
+    "methods": {
+      "name": "Méthodes & Outils",
+      "items": [
+        "Agile / Scrum", "Jira", "Git Flow",
+        "SOLID", "MVC", "Design Patterns",
+        "OWASP Top 10", "SEO Technique", "Core Web Vitals",
+        "Pair-programming", "Code Review"
+      ]
     }
   },
+
   "experiences": [
     {
-      "title": "Développeur Full Stack Freelance",
+      "title": "Chef IT & Développeur Full Stack",
       "company": "RAVINALA Digital",
-      "period": "Fév 2026 - Présent",
-      "description": "Conception et développement d'applications web full stack pour divers clients.",
+      "companyType": "Freelance · Antananarivo, Madagascar",
+      "period": "Février 2026 – Présent",
+      "description": "Pilotage technique d'une équipe des développeurs et développement d'applications web full stack (Laravel, React, Node.js/Fastify) en environnement Agile/Scrum.",
       "achievements": [
-        "Développement d'API REST avec Laravel et Node.js",
-        "Création d'interfaces React/TypeScript performantes",
-        "Déploiement sur VPS avec Docker et CI/CD",
-        "Intégration de systèmes de paiement (Mobile Money, Stripe)",
-        "Optimisation des performances et SEO"
+        "Gestion du backlog, rédaction des User Stories et suivi des sprints sur Jira",
+        "Conception et maintenance d'architectures API REST modulaires, sécurisées et scalables avec Laravel (Sanctum, Spatie RBAC, Eloquent ORM)",
+        "Développement de la plateforme e-commerce ASAP full stack : catalogue, panier, paiement Mobile Money, intégration Stripe + MVola et webhooks",
+        "Déploiement et supervision d'infrastructures VPS Linux sous Nginx (PHP-FPM, SSL/TLS, reverse proxy, monitoring applicatif)",
+        "Sécurisation des endpoints : JWT, RBAC, conformité OWASP Top 10, audit de vulnérabilités",
+        "Optimisation SEO technique : sitemaps dynamiques, Core Web Vitals (LCP, CLS, FID), Schema.org",
+        "Automatisation CI/CD via GitHub Actions, Git Flow et pipelines de déploiement continu",
+        "Livraison clients PME : aikovoyage.com, uvanilla.com, promabio.com — refonte, SEO, déploiement"
+      ],
+      "badges": [
+        "Laravel", "PHP 8.x", "Fastify", "React", "TypeScript",
+        "Prisma", "Eloquent ORM", "REST API", "GraphQL",
+        "MySQL", "PostgreSQL", "Redis",
+        "Docker", "Linux/Nginx", "CI/CD", "GitHub Actions",
+        "JWT", "RBAC", "Sanctum", "Spatie", "OWASP",
+        "SEO Technique", "Core Web Vitals",
+        "Git Flow", "Jira", "Agile/Scrum"
       ]
     },
     {
       "title": "Développeur Full Stack",
-      "company": "Ornella Center · Mahiratra Groupe",
-      "period": "Sep 2025 - Jan 2026",
-      "description": "Développement d'applications web pour la gestion d'entreprise.",
+      "company": "Ornella Center — Mahiratra Groupe",
+      "companyType": "Stage · Antalaha, Madagascar",
+      "period": "Septembre 2025 – Janvier 2026",
+      "description": "Développement full stack d'un module métier avec React/TypeScript, déploiement Docker et pipelines CI/CD en environnement Agile.",
       "achievements": [
-        "Implémentation de tableaux de bord analytiques",
-        "Optimisation des performances frontend",
-        "Gestion de projet en méthodologie Agile/Scrum",
-        "Création d'API RESTful sécurisées",
-        "Formation des stagiaires sur React et TypeScript"
+        "Développement React/TypeScript : composants réutilisables, architecture modulaire, clean code, ESLint, optimisation rendering (lazy loading, React.memo, useMemo)",
+        "Conception API REST Node.js/Express — authentification JWT, gestion des rôles RBAC, middleware de sécurité",
+        "Déploiement Docker & pipelines CI/CD — containerisation des services, optimisation des performances et réduction du bundle size",
+        "Gestion base de données MongoDB : modélisation NoSQL, indexation, optimisation des requêtes",
+        "Tests unitaires et fonctionnels : React Testing Library & PHPUnit/Pest — couverture de code > 75%",
+        "Workflow Git Flow collaboratif : branches feature, Pull Requests, code review structuré"
+      ],
+      "badges": [
+        "React", "TypeScript", "Node.js", "Express.js",
+        "Laravel", "Inertia.js", "Tailwind CSS",
+        "JWT", "RBAC", "MongoDB", "MySQL",
+        "Docker", "CI/CD", "Git Flow",
+        "React Testing Library", "Pest", "Figma"
       ]
     },
     {
-      "title": "Développeur Frontend Stagiaire",
-      "company": "Mahiratra Groupe Antalaha",
-      "period": "Oct 2025 - Présent",
-      "description": "Développement d'interfaces utilisateur modernes.",
+      "title": "Développeur Frontend",
+      "company": "Vahatra Center Diego-Suarez",
+      "companyType": "Hackathon · 1ère Place ",
+      "period": "Août 2025",
+      "description": "Développement complet d'une plateforme web collaborative full stack en 48h.",
       "achievements": [
-        "Création de composants React réutilisables",
-        "Intégration de maquettes Figma",
-        "Tests unitaires avec React Testing Library",
-        "Collaboration avec l'équipe backend",
-        "Mise en place de l'état global avec Context API"
+        "Architecture et développement full stack d'une plateforme collaborative en 48h : React + Laravel + MySQL + REST API",
+        "Dashboard temps réel : suivi de l'avancement global, KPIs dynamiques, graphiques Chart.js et indicateurs de performance",
+        "Gestion de projets, tâches et jalons — workflows collaboratifs avec attribution et gestion des rôles utilisateurs",
+        "Backend REST API Laravel avec authentification sécurisée, gestion des rôles (admin/manager/contributeur)",
+        "Interface responsive mobile + desktop — intégration Figma pixel-perfect sous contrainte de temps",
+        "Optimisation UI/UX : accessibilité, Core Web Vitals, performance sous pression temps réel"
+      ],
+      "badges": [
+        "React", "Laravel", "PHP", "MySQL",
+        "REST API", "Tailwind CSS", "Chart.js",
+        "Dashboard", "Temps réel", "Figma", "Responsive"
+      ]
+    },
+    {
+      "title": "Développeur Full Stack Freelance",
+      "company": "Indépendant",
+      "companyType": "Freelance · Madagascar (Remote & Local)",
+      "period": "2022 – Présent",
+      "description": "Développement d'applications web et mobiles hybrides pour clients PME malgaches : architecture, développement, déploiement, SEO et maintenance.",
+      "achievements": [
+        "Développement d'applications mobiles hybrides React Native (iOS/Android) — Expo, React Navigation, Redux/Zustand",
+        "Livraison de sites vitrine et e-commerce performants : aikovoyage.com, uvanilla.com, promabio.com",
+        "Architecture full stack : PHP, React.js, Node.js, API REST, intégration Mobile Money",
+        "Administration VPS Linux : Nginx, SSL/TLS, sécurité, backup automatisé, monitoring",
+        "Déploiement automatisé et maintenance corrective en autonomie complète",
+        "Gestion de projet autonome : cahier des charges, estimation, livraison dans les délais",
+        "Audit et optimisation SEO technique : Google Search Console, PageSpeed Insights, Lighthouse"
+      ],
+      "badges": [
+        "PHP", "React.js", "React Native", "Node.js",
+        "REST API", "MySQL", "Linux VPS", "Nginx",
+        "SEO", "E-commerce", "Figma", "Bootstrap",
+        "Mobile Money", "Expo", "Redux", "TypeScript"
       ]
     }
   ],
+
   "education": [
     {
-      "degree": "Master en Science Informatique",
-      "specialty": "Télécommunication et Réseaux",
+      "degree": "Master en Informatique & Télécommunications",
+      "specialty": "Télécommunication & Réseaux — Architecture 5G, Cœur de réseau (AMF/SMF)",
       "school": "École Supérieure Polytechnique d'Antsiranana",
-      "period": "2024 - Présent",
-      "description": "Spécialisation en Télécommunication et Réseaux, projets de recherche avancés"
+      "period": "2024 – Présent",
+      "description": "Mémoire de recherche en cours — spécialisation réseaux télécoms, architecture 5G et intégration systèmes distribués"
     },
     {
-      "degree": "Licence en Informatique Industrielle",
+      "degree": "Licence en Électronique & Informatique Industrielle",
+      "specialty": "Informatique Industrielle & Systèmes embarqués",
       "school": "École Supérieure Polytechnique d'Antsiranana",
-      "period": "2023 - 2024",
-      "description": "Mention Bien - Formation complète en développement logiciel et systèmes embarqués"
+      "period": "2021 – 2023",
+      "description": "Mention Bien — Formation complète en développement logiciel, systèmes embarqués et réseaux"
     },
     {
       "degree": "Baccalauréat Série Scientifique",
-      "school": "Lycée Maroantsetra",
-      "period": "2018 - 2019",
-      "description": "Mention Assez Bien - Option Mathématiques et Physique"
+      "specialty": "Option Mathématiques & Physique",
+      "school": "Lycée Général de Maroantsetra",
+      "period": "2018 – 2019",
+      "description": "Mention Assez Bien"
     }
   ],
+
   "certifications": [
-    { "name": "Developer Full Stack", "issuer": "Ravinala Digitale", "year": "En cours", "link": "#" },
-    { "name": "TypeScript Developer Certification", "issuer": "Mahiratra Groupe", "year": "2025", "link": "#" },
-    { "name": "Licence en Informatique et Electronique", "issuer": "ESPA", "year": "2024", "link": "#" },
-    { "name": "Baccalauréat Série Scientifique", "issuer": "Lycée Maroantsetra", "year": "2019", "link": "#" }
+    {
+      "name": "TypeScript Developer Certification",
+      "issuer": "Mahiratra Groupe",
+      "year": "2025",
+      "link": "#"
+    },
+    {
+      "name": "Licence Électronique & Informatique Industrielle",
+      "issuer": "École Supérieure Polytechnique d'Antsiranana",
+      "year": "2023",
+      "link": "#"
+    },
+    {
+      "name": "Baccalauréat Série Scientifique",
+      "issuer": "Lycée de Maroantsetra",
+      "year": "2019",
+      "link": "#"
+    }
   ],
+
   "languages": [
     { "name": "Malagasy", "level": "Langue maternelle", "percentage": 100 },
-    { "name": "Français", "level": "Intermédiaire avancé", "percentage": 85 },
-    { "name": "Anglais", "level": "Niveau technique", "percentage": 65 }
+    { "name": "Français", "level": "Bilingue C1", "percentage": 90 },
+    { "name": "Anglais", "level": "Professionnel technique", "percentage": 70 }
   ],
+
   "projects": [
     {
-      "name": "Tsingy Rouge",
-      "description": "Site web complet développé en 48h - 1ère place Hackathon",
-      "tech": ["React", "Laravel", "MySQL", "Tailwind"],
+      "name": "Tia-Ahay API",
+      "description": "Plateforme EdTech pour étudiants malgaches — API REST scalable propulsée par Fastify/Prisma, authentification JWT/RBAC, paiements tokenisés, architecture monorepo pnpm.",
+      "tech": ["Fastify", "Prisma", "TypeScript", "PostgreSQL", "JWT", "Docker", "pnpm workspaces"],
+      "link": null,
+      "github": "https://github.com/clevino512/tia-ahay",
+      "status": "En développement"
+    },
+    {
+      "name": "Tsingy Rouge — Hackathon 1ère Place",
+      "description": "Plateforme web collaborative full stack développée en 48h — dashboard temps réel, gestion de projets/tâches, REST API avec rôles utilisateurs. 1ère place Vahatra Hackathon 2025.",
+      "tech": ["React", "Laravel", "MySQL", "Tailwind CSS", "Chart.js", "REST API"],
       "link": "https://tsingyrouge.msi2025a.net/",
-      "github": "https://github.com/clevino512/tsingy-rouge"
+      "github": "https://github.com/clevino512/tsingy-rouge",
+      "status": "Livré"
     },
     {
       "name": "Portfolio Professionnel",
-      "description": "Portfolio moderne avec animations et mode sombre",
-      "tech": ["React", "TypeScript", "Tailwind", "Framer Motion"],
-      "link": "https://portfolio-six-theta-qsmr10tp8l.vercel.app/",
-      "github": "https://github.com/clevino512/portfolio"
+      "description": "Portfolio moderne avec animations avancées, mode sombre, SEO optimisé et score Lighthouse > 95.",
+      "tech": ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
+      "link": "https://portfolio-opal-nine-93.vercel.app/",
+      "github": "https://github.com/clevino512/portfolio",
+      "status": "Livré"
+    },
+    {
+      "name": "ASAP — Plateforme E-commerce",
+      "description": "Application de service à la demande full stack : catalogue produits, gestion panier, passerelles de paiement Mobile Money et Stripe, webhooks et tableau de bord admin.",
+      "tech": ["Laravel", "React", "Inertia.js", "Stripe", "Mobile Money", "MySQL", "Docker"],
+      "link": null,
+      "github": null,
+      "status": "En production"
     },
     {
       "name": "UNM Sambava",
-      "description": "Template web professionnel responsive",
-      "tech": ["React", "Tailwind CSS"],
+      "description": "Template web institutionnel responsive, optimisé SEO et performance.",
+      "tech": ["React", "Tailwind CSS", "Vite"],
       "link": "https://unm-7agc.vercel.app/",
-      "github": null
+      "github": null,
+      "status": "Livré"
     }
   ],
+
   "achievements": [
-    { "title": "Hackathon Winner", "description": "1ère place - 48h challenge", "year": "2025" },
-    { "title": "Meilleur Projet UI", "description": "Design récompensé par le jury", "year": "2025" },
-    { "title": "15+ Projets Livrés", "description": "En freelance et en entreprise", "year": "2026" }
+    {
+      "title": "Hackathon Winner ",
+      "description": "1ère place — Vahatra Hackathon Diego-Suarez 2025, plateforme full stack en 48h",
+      "year": "2025"
+    },
+    {
+      "title": "Meilleur Projet UI",
+      "description": "Distinction jury pour l'excellence du design et de l'expérience utilisateur",
+      "year": "2025"
+    },
+    {
+      "title": "15+ Projets Livrés",
+      "description": "Applications web, mobiles et e-commerce livrées en freelance et en entreprise",
+      "year": "2022–2026"
+    },
+    {
+      "title": "Chef IT à 25 ans",
+      "description": "Pilotage d'une équipe technique de 3 développeurs en environnement production",
+      "year": "2026"
+    }
   ],
-  "interests": ["Open Source", "Veille technologique", "UI/UX Design", "Photographie", "Voyages"]
+
+  "interests": [
+    "Open Source", "Veille technologique", "UI/UX Design",
+    "Architecture logicielle", "EdTech", "Photographie", "Voyages"
+  ],
+
+  "references": [
+    {
+      "name": "M. Andrin'Ny Aina Razafinjato",
+      "role": "Directeur Technique — RAVINALA Digital",
+      "contact": "Sur demande"
+    },
+    {
+      "name": "Dr RANDRIAMANATENASOA Njeva",
+      "role": "Product Owner — Ornella Center Antalaha",
+      "contact": "Sur demande"
+    }
+  ]
 }
