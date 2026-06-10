@@ -18,8 +18,7 @@
       "Livraison clients PME , refonte, SEO, déploiement automatisé"
     ],
     "badges": [
-      "Laravel", "PHP 8.x", "React", "TypeScript",
-      "Prisma", "Eloquent ORM", "REST API", "GraphQL",
+      "Laravel", "PHP 8.x", "React", "TypeScript", "Eloquent ORM", "REST API", "GraphQL",
       "MySQL", "PostgreSQL", "MongoDB", "Redis",
       "Docker", "Linux/Nginx", "CI/CD", "GitHub Actions",
       "JWT", "RBAC", "Sanctum", "Spatie", "OWASP",
