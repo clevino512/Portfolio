@@ -82,7 +82,7 @@ export default function Navbar({ darkMode, toggleDarkMode }: NavbarProps) {
             <Code2 size={17} className="text-white" />
           </div>
           <span className="text-lg font-black tracking-tight text-gray-900 dark:text-white">
-            RC<span className="text-primary-500">.</span>dev
+            Clévin<span className="text-primary-500">.</span>Portofolio
           </span>
         </motion.div>
 
