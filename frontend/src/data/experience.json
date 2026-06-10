@@ -1,134 +1,282 @@
 [
   {
-    "titre": "Développeur Full Stack Freelance",
-    "entreprise": "RAVINALA Digital · Indépendant",
+    "titre": "Chef IT & Développeur Full Stack Senior",
+    "entreprise": "RAVINALA Digital",
     "date": "Février 2026 – Présent",
     "type": "Freelance",
-    "contenu": "Conception et développement d'applications web full stack (React, Laravel, Node.js)",
+    "contenu": "Pilotage technique et développement d'applications web full stack (Laravel, React, Node.js/Fastify) avec gestion d'équipe Agile et supervision d'infrastructures VPS Linux.",
     "descriptions": [
-      "Développement d'API REST avec Laravel (controllers resourceful, Form Requests, API Resources)",
-      "Authentification et autorisations avec Laravel Sanctum / Spatie Permissions",
-      "Modélisation base de données avec Eloquent ORM et migrations versionnées",
-      "Intégration systèmes de paiement tiers (Mobile Money, Stripe, PayPal)",
-      "Déploiement et configuration VPS Linux (Nginx, PHP-FPM, Docker)",
-      "Développement d'applications React/TypeScript complexes avec Hooks, Context API",
-      "Intégration APIs REST & GraphQL, paiement, email, SMS (services tiers)"
+      "Leadership technique d'une équipe de 3 développeurs en méthodologie Agile/Scrum — gestion du backlog, rédaction des User Stories et suivi des sprints sur Jira",
+      "Conception et maintenance d'architectures API REST modulaires, sécurisées et scalables avec Laravel (Sanctum, Spatie RBAC, Form Requests, API Resources, Eloquent ORM)",
+      "Développement de la plateforme e-commerce ASAP full stack : catalogue, panier, paiement Mobile Money, intégration passerelles Stripe + MVola et gestion webhooks",
+      "Déploiement, configuration et supervision d'infrastructures VPS Linux sous Nginx (PHP-FPM, SSL, reverse proxy, monitoring applicatif)",
+      "Sécurisation des endpoints : authentification JWT, politiques RBAC fines, conformité OWASP Top 10, audit de vulnérabilités",
+      "Optimisation SEO technique avancée : sitemaps dynamiques, balises méta structurées, Core Web Vitals (LCP, CLS, FID), Schema.org, stratégie de crawl",
+      "Automatisation des workflows, versioning avancé Git Flow (branches feature, PR, code review) et pipelines CI/CD GitHub Actions",
+      "Développement d'applications React/TypeScript complexes : Hooks, Context API, Redux, lazy loading, memoization, bundle optimization",
+      "Intégration APIs REST & GraphQL, services tiers : paiement, email (SMTP/Mailgun), SMS, notifications push",
+      "Livraison clients PME : aikovoyage.com, uvanilla.com, promabio.com — refonte, SEO, déploiement automatisé"
     ],
-    "badges": ["Laravel", "React", "TypeScript", "Node.js", "REST API", "Docker", "MySQL", "Sanctum"]
+    "badges": [
+      "Laravel", "PHP 8.x", "Fastify", "Node.js", "React", "TypeScript",
+      "Prisma", "Eloquent ORM", "REST API", "GraphQL",
+      "MySQL", "PostgreSQL", "MongoDB", "Redis",
+      "Docker", "Linux/Nginx", "CI/CD", "GitHub Actions",
+      "JWT", "RBAC", "Sanctum", "Spatie", "OWASP",
+      "SEO Technique", "Core Web Vitals", "Schema.org",
+      "Git Flow", "Jira", "Agile/Scrum", "Leadership"
+    ],
+    "niveau": "Senior",
+    "mots_cles_seo": [
+      "full stack developer", "tech lead", "API REST Laravel", "DevOps VPS Linux",
+      "e-commerce Madagascar", "Agile Scrum", "CI/CD", "microservices"
+    ]
   },
   {
     "titre": "Développeur Full Stack",
-   "entreprise": "Mahiratra Groupe Antalaha",
+    "entreprise": "Ornella Center — Mahiratra Groupe · Antalaha",
     "date": "Septembre 2025 – Janvier 2026",
     "type": "Stage",
-    "contenu": "Développement full stack avec React, Node.js et déploiement Docker",
+    "contenu": "Développement full stack sur plateforme métier (gestion des stocks) avec React/TypeScript, Node.js/Express, déploiement Docker et pipelines CI/CD en environnement Agile.",
     "descriptions": [
-      "Développement React/TypeScript : composants réutilisables, clean code, ESLint",
-      "API REST Node.js/Express — authentification JWT & gestion rôles RBAC",
-      "Déploiement Docker & pipelines CI/CD — optimisation performances frontend",
-      "Rédaction tests unitaires et fonctionnels (React Testing Library)",
-      "Collaboration Product Owners, UX/UI et sprints Agile/Scrum"
+      "Développement React/TypeScript : composants réutilisables, architecture modulaire, clean code, ESLint, optimisation rendering (lazy loading, React.memo, useMemo)",
+      "Conception et implémentation API REST Node.js/Express — authentification JWT, gestion des rôles RBAC, middleware de sécurité",
+      "Développement module métier gestion de stocks avec Laravel + Inertia.js / React — intégration Figma en interfaces pixel-perfect",
+      "Déploiement Docker & pipelines CI/CD — containerisation des services, optimisation des performances frontend et réduction du bundle size",
+      "Gestion et structuration de bases de données MongoDB (modélisation NoSQL, indexation, optimisation des requêtes)",
+      "Rédaction de tests unitaires et fonctionnels avec React Testing Library & PHPUnit/Pest — couverture de code > 75%",
+      "Collaboration cross-fonctionnelle : Product Owners, UX/UI designers, sprints Agile/Scrum bihebdomadaires, rétrospectives",
+      "Workflow Git Flow collaboratif : branches feature, Pull Requests, code review structuré, merge conflicts resolution"
     ],
-    "badges": ["React", "TypeScript", "Node.js", "Express.js", "JWT", "Docker", "CI/CD", "RBAC", "Agile/Scrum"]
+    "badges": [
+      "React", "TypeScript", "Node.js", "Express.js",
+      "Laravel", "Inertia.js", "Tailwind CSS",
+      "JWT", "RBAC", "MongoDB", "MySQL",
+      "Docker", "CI/CD", "Git Flow",
+      "React Testing Library", "PHPUnit", "Pest",
+      "Figma", "Agile/Scrum", "ESLint"
+    ],
+    "niveau": "Intermédiaire-Senior",
+    "mots_cles_seo": [
+      "React TypeScript developer", "Node.js REST API", "Docker CI/CD",
+      "TDD testing", "Agile Scrum sprint", "full stack stage"
+    ]
   },
   {
-    "titre": "Développeur Frontend",
-    "entreprise": "Vahatra Center Diego · Hackathon",
+    "titre": "Développeur Frontend — 1ère Place Hackathon 🥇",
+    "entreprise": "Vahatra Center Diego-Suarez",
     "date": "Août 2025",
-    "type": "Autres",
-    "contenu": "Développement d'un site web responsive (Projet Hackathon – 1ère Place 🥇)",
+    "type": "Hackathon",
+    "contenu": "Développement complet d'une plateforme web collaborative full stack en 48h — Dashboard temps réel avec KPIs, gestion de projets & tâches, REST API avec auth & rôles utilisateurs. 1ère place 🥇",
     "descriptions": [
-      "Réalisation complète d'un site web responsive en 48h",
-      "Développement en PHP Laravel et React",
-      "Conception UI/UX du site et intégration des fonctionnalités",
-      "Optimisation des performances et de l'expérience utilisateur",
-      "Dashboard temps réel avec suivi de l'avancement global et KPIs"
+      "Architecture et développement full stack d'une plateforme collaborative en 48h : React + Laravel + MySQL + REST API",
+      "Dashboard temps réel avec suivi de l'avancement global, KPIs dynamiques, graphiques Chart.js et indicateurs de performance",
+      "Gestion de projets, tâches et jalons — workflows collaboratifs avec attribution des rôles utilisateurs",
+      "Backend REST API Laravel avec authentification sécurisée, gestion des rôles (admin/manager/contributeur) et middleware de protection",
+      "Interface responsive mobile + desktop avec Tailwind CSS — intégration fidèle de maquettes Figma sous contrainte de temps",
+      "Optimisation des performances UI/UX : accessibilité, Core Web Vitals, expérience utilisateur sous pression temps réel",
+      "Base de données relationnelle MySQL : modélisation entités-relations, migrations, requêtes optimisées"
     ],
-    "badges": ["React", "Laravel", "PHP", "Tailwind CSS", "UI/UX", "Dashboard"]
+    "badges": [
+      "React", "Laravel", "PHP", "MySQL",
+      "REST API", "Tailwind CSS", "Chart.js",
+      "Dashboard", "Temps réel", "UI/UX", "Figma",
+      "Responsive", "Git", "Performance"
+    ],
+    "niveau": "Senior",
+    "mots_cles_seo": [
+      "hackathon winner", "dashboard temps réel", "plateforme collaborative",
+      "full stack 48h", "React Laravel MySQL", "KPI dashboard"
+    ]
+  },
+  {
+    "titre": "Analyste de Données & Développeur Web",
+    "entreprise": "École Polytechnique d'Antsiranana",
+    "date": "Janvier 2025 – Août 2025",
+    "type": "Mission académique",
+    "contenu": "Collecte, traitement et visualisation de données académiques — Dashboard analytique PHP/Chart.js avec automatisation des rapports et stockage PostgreSQL.",
+    "descriptions": [
+      "Collecte, nettoyage et structuration de jeux de données académiques pour analyse statistique (ETL pipeline)",
+      "Conception d'un tableau de bord analytique (PHP natif + Chart.js) pour visualiser les KPIs institutionnels en temps réel",
+      "Automatisation des rapports périodiques via scripts PHP/Shell — génération automatique et distribution par email",
+      "Administration et optimisation d'une base de données PostgreSQL : indexation, vues matérialisées, optimisation des requêtes",
+      "Modélisation des données : entités-relations, normalisation, procédures stockées"
+    ],
+    "badges": [
+      "PHP natif", "PostgreSQL", "Chart.js",
+      "Shell Script", "ETL", "Data Analysis",
+      "Dashboard", "Reporting", "SQL"
+    ],
+    "niveau": "Intermédiaire",
+    "mots_cles_seo": [
+      "data analysis", "PHP dashboard", "PostgreSQL", "ETL pipeline", "KPI reporting"
+    ]
+  },
+  {
+    "titre": "Développeur Full Stack Freelance — React Native & Web",
+    "entreprise": "Indépendant · Madagascar",
+    "date": "2022 – Présent",
+    "type": "Freelance",
+    "contenu": "Développement d'applications web et mobiles hybrides pour clients PME malgaches — livraison de A à Z : architecture, développement, déploiement, SEO et maintenance.",
+    "descriptions": [
+      "Développement d'applications mobiles hybrides React Native (iOS/Android) orientées services — architecture Expo, navigation React Navigation, state management Redux/Zustand",
+      "Livraison de sites vitrine et e-commerce performants pour clients PME : aikovoyage.com, uvanilla.com, promabio.com",
+      "Architecture et développement full stack : PHP natif, React.js, Node.js, API REST, intégration Mobile Money",
+      "Administration serveur VPS Linux : configuration Nginx, SSL/TLS, sécurité, backup automatisé, monitoring",
+      "Déploiement automatisé et maintenance corrective en autonomie complète — SLA respecté, satisfaction client",
+      "Gestion de projet autonome : cahier des charges, estimation, livraison dans les délais, communication client",
+      "Optimisation SEO : audit technique, stratégie de contenu, Google Search Console, PageSpeed Insights"
+    ],
+    "badges": [
+      "PHP natif", "React.js", "React Native", "Node.js",
+      "REST API", "MySQL", "Linux VPS", "Nginx",
+      "SEO", "E-commerce", "Figma", "Bootstrap",
+      "Mobile Money", "Expo", "Redux"
+    ],
+    "niveau": "Senior",
+    "mots_cles_seo": [
+      "freelance full stack Madagascar", "React Native mobile", "e-commerce PME",
+      "VPS Linux admin", "SEO optimization", "livraison client"
+    ]
   },
   {
     "titre": "Graphic Designer & UI Developer",
     "entreprise": "Freelance",
     "date": "2023 – Présent",
     "type": "Freelance",
-    "contenu": "Création de visuels graphiques et templates Web",
+    "contenu": "Création de visuels graphiques, identités visuelles et templates web modernes — intégration Figma-to-code pixel-perfect, design UI/UX orienté conversion.",
     "descriptions": [
-      "Conception de flyers, logos et affiches",
-      "Création de bannières réseaux sociaux",
-      "Production de templates Web modernes",
-      "Approche créative orientée identité visuelle",
-      "Design et conversion de maquettes Figma/Photoshop en pages web responsives"
+      "Conception d'identités visuelles complètes : logos, chartes graphiques, guidelines de marque pour PME",
+      "Design UI/UX : wireframing, prototypage Figma, maquettes haute fidélité, tests utilisateurs",
+      "Conversion maquettes Figma/Photoshop en intégrations web responsives pixel-perfect (HTML/CSS/JS)",
+      "Création de supports marketing digitaux : flyers, bannières réseaux sociaux, affiches événementielles",
+      "Production de templates Web modernes optimisés pour la performance (Lighthouse score > 90)",
+      "Motion design léger et animations CSS/GSAP pour améliorer l'engagement utilisateur",
+      "Collaboration avec développeurs via handoff Figma (tokens de design, composants, specs d'interaction)"
     ],
-    "badges": ["Photoshop", "Illustrator", "Figma", "Canva", "UI Design"]
+    "badges": [
+      "Figma", "Photoshop", "Illustrator", "Canva",
+      "UI Design", "UX Design", "Wireframing", "Prototypage",
+      "HTML/CSS", "GSAP", "Responsive Design",
+      "Branding", "Design System", "Pixel-perfect"
+    ],
+    "niveau": "Intermédiaire-Senior",
+    "mots_cles_seo": [
+      "UI UX designer", "Figma to code", "graphic designer", "branding Madagascar",
+      "design system", "pixel-perfect integration", "logo design"
+    ]
   },
   {
-    "titre": "Stagiaire Journaliste / Animateur Radio",
+    "titre": "Enquêteur Terrain — Programme UNICEF MICS6",
+    "entreprise": "UNICEF · Madagascar",
+    "date": "2018",
+    "type": "Mission",
+    "contenu": "Collecte de données sociales à grande échelle pour le Programme d'Enquête UNICEF MICS6 (Multiple Indicator Cluster Survey) — rigueur méthodologique et gestion terrain.",
+    "descriptions": [
+      "Collecte de données sociales terrain dans le cadre du programme international UNICEF MICS6",
+      "Conduite d'entretiens structurés auprès des ménages selon protocoles d'enquête standardisés",
+      "Saisie rigoureuse des résultats, contrôle qualité des données et reporting quotidien",
+      "Respect strict des protocoles d'enquête, des délais et des normes éthiques de collecte",
+      "Travail en équipe terrain pluridisciplinaire sous supervision de coordinateurs régionaux"
+    ],
+    "badges": [
+      "Enquête terrain", "Collecte de données", "UNICEF MICS6",
+      "Entretiens structurés", "Reporting", "Rigueur méthodologique",
+      "Travail d'équipe", "Éthique de recherche"
+    ],
+    "niveau": "Junior",
+    "mots_cles_seo": [
+      "data collection", "field survey", "UNICEF", "MICS6", "social research"
+    ]
+  },
+  {
+    "titre": "Agent Animation Commerciale & Relation Client",
+    "entreprise": "Plateforme KINGA · Diego-Suarez",
+    "date": "2023",
+    "type": "Emploi",
+    "contenu": "Animation commerciale, promotion de services et gestion de la relation client en face-à-face — développement des compétences en communication et fidélisation.",
+    "descriptions": [
+      "Animation de stands commerciaux et présentation de produits/services auprès du grand public",
+      "Développement des techniques de vente directe et argumentation commerciale",
+      "Gestion des transactions, suivi client et fidélisation de la clientèle",
+      "Communication interpersonnelle et capacité d'adaptation à des profils clients variés"
+    ],
+    "badges": [
+      "Vente directe", "Animation commerciale", "Relation client",
+      "Communication", "Fidélisation", "Négociation"
+    ],
+    "niveau": "Junior",
+    "mots_cles_seo": [
+      "customer relations", "sales", "animation commerciale", "communication client"
+    ]
+  },
+  {
+    "titre": "Agent Service Client Bancaire (BTW)",
+    "entreprise": "Accès Banque · Diego-Suarez",
+    "date": "2023",
+    "type": "Emploi",
+    "contenu": "Accueil client, orientation et traitement des opérations bancaires courantes — rigueur procédurale et confidentialité dans un environnement financier réglementé.",
+    "descriptions": [
+      "Accueil, orientation et accompagnement des clients dans leurs démarches bancaires",
+      "Traitement des demandes de prêt : analyse des dossiers, vérification des pièces justificatives",
+      "Gestion des opérations bancaires courantes : virements, dépôts, retraits, consultations de compte",
+      "Accompagnement des clients pour l'ouverture de comptes bancaires et la mise en place de services",
+      "Application rigoureuse des procédures KYC et respect de la confidentialité des données clients"
+    ],
+    "badges": [
+      "Service client", "Opérations bancaires", "Accueil",
+      "Traitement de prêts", "KYC", "Confidentialité",
+      "Rigueur procédurale", "Fintech"
+    ],
+    "niveau": "Junior",
+    "mots_cles_seo": [
+      "banking service", "customer support", "financial operations", "KYC"
+    ]
+  },
+  {
+    "titre": "Stagiaire Journaliste & Animateur Radio",
     "entreprise": "Radio MBS & Radio 2000",
     "date": "2019 – 2023",
     "type": "Stage",
-    "contenu": "Animation radio, reportages et production éditoriale",
+    "contenu": "Animation radio, reportages en direct, production éditoriale et gestion régie son — développement des compétences en communication orale, storytelling et gestion du direct.",
     "descriptions": [
-      "Rédaction et présentation de reportages en direct",
-      "Couverture d'événements locaux",
-      "Initiation aux techniques de prise de son et de montage audio",
-      "Animation d'émissions locales, préparation de contenus éditoriaux",
-      "Interaction avec les auditeurs en direct et gestion de la régie son"
+      "Rédaction et présentation de reportages en direct — maîtrise de la prise de parole publique et du storytelling",
+      "Couverture d'événements locaux : reportages terrain, interviews et synthèse éditoriale",
+      "Initiation aux techniques de prise de son, mixage audio et montage numérique",
+      "Animation d'émissions locales, préparation de contenus éditoriaux et conducteurs d'émission",
+      "Gestion de la régie son et interaction en direct avec les auditeurs — capacité à gérer la pression du live",
+      "Veille informationnelle et fact-checking des sources pour garantir la fiabilité des contenus diffusés"
     ],
-    "badges": ["Journalisme", "Animation radio", "Montage audio", "Prise de son"]
+    "badges": [
+      "Journalisme", "Animation radio", "Prise de parole publique",
+      "Montage audio", "Prise de son", "Storytelling",
+      "Rédaction", "Fact-checking", "Communication", "Live management"
+    ],
+    "niveau": "Junior",
+    "mots_cles_seo": [
+      "journalisme radio", "animation", "communication", "storytelling", "rédaction"
+    ]
   },
   {
-    "titre": "Agent Animation & Vente",
-    "entreprise": "Plateforme KINGA · Diego-Suarez",
-    "date": "2023",
-    "type": "embauche",
-    "contenu": "Animation commerciale et gestion de la relation client",
-    "descriptions": [
-      "Animation de stands commerciaux",
-      "Promotion de produits et services auprès du public",
-      "Gestion des transactions et fidélisation de la clientèle"
-    ],
-    "badges": ["Vente", "Animation commerciale", "Relation client", "Fidélisation"]
-  },
-  {
-    "titre": " Service Client BTW ",
-    "entreprise": "Accès Banque  · Diego-Suarez",
-    "date": "2023",
-    "type": "embauche",
-    "contenu": "Accueil client et traitement des opérations bancaires",
-    "descriptions": [
-      "Suivi des procédures d'accueil et d'orientation des clients",
-      "Traitement des demandes de prêt",
-      "Gestion des opérations bancaires courantes",
-      "Accompagnement des clients pour l'ouverture de comptes bancaires"
-    ],
-    "badges": ["Service client", "Opérations bancaires", "Accueil", "Prêts"]
-  },
-  {
-    "titre": "Enquêteur Terrain",
-    "entreprise": "UNICEF · MICS6",
-    "date": "2018",
-    "type": "Autres",
-    "contenu": "Collecte de données sociales sur le terrain (Programme UNICEF)",
-    "descriptions": [
-      "Collecte de données sociales sur le terrain (enquête UNICEF)",
-      "Conduite d'entretiens structurés auprès des ménages",
-      "Saisie rigoureuse des résultats et reporting",
-      "Respect des protocoles d'enquête et des délais"
-    ],
-    "badges": ["Enquête terrain", "Collecte de données", "Entretiens", "Reporting", "UNICEF"]
-  },
-  {
-    "titre": "Formation Électricité Bâtiment",
-    "entreprise": "Installation & Câblage",
+    "titre": "Formation Électricité Bâtiment & Câblage",
+    "entreprise": "Formation Professionnelle",
     "date": "2022",
-    "type": "Autres",
-    "contenu": "Installation électrique résidentielle et câblage",
+    "type": "Formation",
+    "contenu": "Formation pratique en installation électrique résidentielle, lecture de schémas et câblage de tableaux — compétences transverses en lecture de documentation technique.",
     "descriptions": [
-      "Formation pratique en installation électrique résidentielle",
-      "Lecture de schémas électriques",
-      "Câblage de tableaux électriques",
-      "Respect des normes de sécurité"
+      "Formation pratique en installation électrique résidentielle selon normes en vigueur",
+      "Lecture et interprétation de schémas électriques unifilaires et multifilaires",
+      "Câblage de tableaux électriques : disjoncteurs, différentiels, protection de circuits",
+      "Application des normes de sécurité électrique (NFC 15-100) et habilitation B0/H0",
+      "Résolution de pannes et diagnostic électrique par méthode analytique"
     ],
-    "badges": ["Électricité", "Câblage", "Tableaux électriques", "Sécurité"]
+    "badges": [
+      "Électricité bâtiment", "Câblage", "Tableaux électriques",
+      "Schémas électriques", "Sécurité NFC 15-100", "Diagnostic technique"
+    ],
+    "niveau": "Technique",
+    "mots_cles_seo": [
+      "installation électrique", "câblage", "électricité bâtiment", "NFC 15-100"
+    ]
   }
 ]
