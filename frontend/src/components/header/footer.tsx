@@ -38,7 +38,7 @@ export default function Footer() {
                 <Code2 size={17} className="text-white" />
               </div>
               <span className="text-lg font-black tracking-tight text-white">
-                RC<span className="text-primary-400">.</span>dev
+                R<span className="text-primary-400">.</span>.Clévin
               </span>
             </div>
             <p className="text-sm text-gray-500 leading-relaxed max-w-xs">
