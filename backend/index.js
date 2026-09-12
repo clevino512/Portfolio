@@ -3,7 +3,6 @@ import express from 'express';
 import cors from 'cors';
 import contactRoutes from './routes/contact.js';
 import testimonialsRoutes from './routes/testimonials.js';
-import serverless from 'serverless-http';
 
 const app = express();
 
@@ -37,11 +36,9 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal Server Error', details: err.message });
 });
 
-const serverlessHandler = serverless(app, { requestBodyLimit: '10mb' });
-
 if (!process.env.VERCEL) {
   const PORT = process.env.PORT || 3001;
   app.listen(PORT, () => console.log(`✅ Server running on http://localhost:${PORT}`));
 }
 
-export default serverlessHandler;
+export default app;
