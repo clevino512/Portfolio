@@ -37,10 +37,41 @@ const inputClass =
   "w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 focus:bg-white dark:focus:bg-gray-800/80 transition-all duration-200 text-sm";
 
 const labelClass = "block text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1.5";
+const API_BASE_URL = (import.meta.env.VITE_API_URL || "/api").replace(/\/$/, "");
+
+const getApiError = (response: Response, body: string) => {
+  try {
+    const parsed = JSON.parse(body) as { error?: string };
+    if (parsed.error) return parsed.error;
+  } catch {
+    // The API returned plain text or HTML instead of JSON.
+  }
+
+  if (response.status === 404) {
+    return "Le service des témoignages n'est pas disponible sur ce déploiement. Configurez VITE_API_URL vers le backend.";
+  }
+
+  return `Le serveur a renvoyé une réponse inattendue (${response.status}).`;
+};
+
+const readApiResponse = async <T,>(response: Response): Promise<T> => {
+  const body = await response.text();
+
+  if (!response.ok) {
+    throw new Error(getApiError(response, body));
+  }
+
+  try {
+    return JSON.parse(body) as T;
+  } catch {
+    throw new Error(getApiError(response, body));
+  }
+};
 
 export default function Testimonials() {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [loading, setLoading] = useState(true);
+  const [apiError, setApiError] = useState("");
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
@@ -70,12 +101,13 @@ export default function Testimonials() {
   // Fetch testimonials
   const fetchTestimonials = async () => {
     try {
-      const res = await fetch("/api/testimonials");
-      if (!res.ok) throw new Error("Erreur réseau");
-      const data = await res.json();
+      const res = await fetch(`${API_BASE_URL}/testimonials`);
+      const data = await readApiResponse<Testimonial[]>(res);
+      if (!Array.isArray(data)) throw new Error("Réponse invalide du service des témoignages.");
       setTestimonials(data);
-    } catch {
-      // Keep empty array on error
+      setApiError("");
+    } catch (error) {
+      setApiError(error instanceof Error ? error.message : "Le service des témoignages est indisponible.");
     } finally {
       setLoading(false);
     }
@@ -123,16 +155,14 @@ export default function Testimonials() {
     setFormError("");
     setSubmitting(true);
     try {
-      const res = await fetch("/api/testimonials", {
+      const res = await fetch(`${API_BASE_URL}/testimonials`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Erreur inconnue");
+      await readApiResponse<{ success: boolean; testimonial: Testimonial }>(res);
       setSubmitted(true);
       await fetchTestimonials();
-      // Reset form but keep modal open showing success
     } catch (err: unknown) {
       setFormError(err instanceof Error ? err.message : "Une erreur est survenue. Réessayez.");
     } finally {
@@ -150,29 +180,17 @@ export default function Testimonials() {
   };
 
   // Admin
-  const handleAdminLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (adminKey.trim()) {
-      setAdminMode(true);
-      setAdminError("");
-      setShowAdminPrompt(false);
-      setAdminKey("");
-    } else {
-      setAdminError("Clé requise.");
-    }
-  };
-
   const handleDelete = async (id: string) => {
     if (!confirm("Supprimer ce témoignage définitivement ?")) return;
     setDeletingId(id);
     try {
-      const res = await fetch(`/api/testimonials/${id}`, {
+      const res = await fetch(`${API_BASE_URL}/testimonials/${id}`, {
         method: "DELETE",
         headers: { "x-admin-key": adminKey || localStorage.getItem("rc_admin_key") || "" },
       });
       if (!res.ok) {
-        const data = await res.json();
-        alert(data.error || "Clé admin invalide.");
+        const body = await res.text();
+        alert(getApiError(res, body));
         setAdminMode(false);
         return;
       }
@@ -220,6 +238,11 @@ export default function Testimonials() {
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mt-6">
             Retours de clients, superviseurs et collaborateurs qui ont travaillé directement avec moi.
           </p>
+          {apiError && (
+            <p className="max-w-2xl mx-auto mt-4 text-sm text-amber-700 dark:text-amber-300" role="status">
+              {apiError}
+            </p>
+          )}
 
           {/* Add testimonial button */}
           <motion.button

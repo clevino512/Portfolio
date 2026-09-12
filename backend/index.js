@@ -11,9 +11,9 @@ app.use(express.json({ limit: '10kb' }));
 
 const corsOptions = {
   origin: true,
-  methods: ['GET', 'POST', 'OPTIONS'],
+  methods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
   credentials: true,
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'x-admin-key'],
   optionsSuccessStatus: 200
 };
 
