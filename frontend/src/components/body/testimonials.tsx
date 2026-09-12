@@ -37,7 +37,10 @@ const inputClass =
   "w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 focus:bg-white dark:focus:bg-gray-800/80 transition-all duration-200 text-sm";
 
 const labelClass = "block text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1.5";
-const API_BASE_URL = (import.meta.env.VITE_API_URL || "/api").replace(/\/$/, "");
+const API_BASE_URL = (
+  import.meta.env.VITE_API_URL ||
+  (import.meta.env.PROD ? "https://portfolio-backend-ruby-nine.vercel.app/api" : "/api")
+).replace(/\/$/, "");
 
 const getApiError = (response: Response, body: string) => {
   try {
